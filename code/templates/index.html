@@ -1,0 +1,29 @@
+<!doctype html>
+<title>Emmerson Evaluation</title>
+ <!--link rel=stylesheet type=text/css class="btn btn-5" href="{{ url_for('static', filename='style.css') }}"a-->
+</head>
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/default.css')}}" />
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/component.css')}}" />
+		<script src="{{ url_for('static', filename='js/modernizr.custom.js')}}"></script>
+
+<form action="" method=post enctype=multipart/form-data>
+<!--body bgcolor="#2ecc71"-->
+<body bgcolor="#FF0090">
+	<section class="color-4">
+ <center><font size="14" color="white">Emmerson-Evaluation</font></center>
+<hr>
+<a class="zr"></a>
+<p>        <a class="btn btn-4 btn-4c icon-arrow-right" href="{{ url_for('lokale_mieszkalne') }}">LOKALE MIESZKALNE</a></p>
+<p>        <a class="btn btn-4 btn-4c icon-arrow-right" href="{{ url_for('lokale_uslugowe') }}">LOKALE USŁUGOWE</a></p>
+<p>        <a class="btn btn-4 btn-4c icon-arrow-right" href="{{ url_for('grunty') }}">GRUNTY</a></p>
+<p>        <a class="btn btn-4 btn-4c icon-arrow-right" href="{{ url_for('budynki') }}">BUDYNKI</a></p>
+<p>        <a class="btn btn-4 btn-4c icon-arrow-right" href="{{ url_for('mp') }}">MIEJSCA POSTOJOWE</a></p>
+<p>        <a class="btn btn-4 btn-4c icon-arrow-right" href="{{ url_for('history') }}">HISTORIA</a></p>
+	</section>
+</body>
+</form>
+
+
+
+</html>
+

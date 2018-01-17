@@ -1,0 +1,42 @@
+[2018-01-15 15:56:11,352] {/home/ee/code/index_new.py:89} INFO - Start procesu konwertowania dla pliku: GRUNT_przetarg_gmina.pdf
+[2018-01-15 15:56:31,193] {/home/ee/code/index_new.py:91} INFO - Koniec procesu konwertowania dla pliku: GRUNT_przetarg_gmina.pdf
+[2018-01-15 16:11:56,400] {/home/ee/code/index_new.py:89} INFO - Start procesu konwertowania dla pliku: GRUNT_przetarg_gmina.pdf
+[2018-01-15 16:12:16,510] {/home/ee/code/index_new.py:91} INFO - Koniec procesu konwertowania dla pliku: GRUNT_przetarg_gmina.pdf
+[2018-01-16 14:38:14,391] {/home/ee/code/index_new.py:150} INFO - Start procesu usuwania plików
+[2018-01-16 14:38:14,393] {/home/ee/code/index_new.py:157} INFO - Koniec procesu usuwania plików
+[2018-01-16 14:38:18,486] {/home/ee/code/index_new.py:89} INFO - Start procesu konwertowania dla pliku: GRUNT_przetarg_gmina_cz._2.pdf
+[2018-01-16 14:38:42,878] {/home/ee/code/index_new.py:91} INFO - Koniec procesu konwertowania dla pliku: GRUNT_przetarg_gmina_cz._2.pdf
+[2018-01-16 14:39:46,176] {/home/ee/code/index_new.py:150} INFO - Start procesu usuwania plików
+[2018-01-16 14:39:46,178] {/home/ee/code/index_new.py:157} INFO - Koniec procesu usuwania plików
+[2018-01-16 14:39:50,116] {/home/ee/code/index_new.py:89} INFO - Start procesu konwertowania dla pliku: GRUNT_przetarg_gmina_cz._2.pdf
+[2018-01-16 14:40:11,020] {/home/ee/code/index_new.py:91} INFO - Koniec procesu konwertowania dla pliku: GRUNT_przetarg_gmina_cz._2.pdf
+[2018-01-16 14:40:40,657] {/home/ee/code/index_new.py:89} INFO - Start procesu konwertowania dla pliku: GRUNT_przetarg_gmina.pdf
+[2018-01-16 14:41:00,402] {/home/ee/code/index_new.py:91} INFO - Koniec procesu konwertowania dla pliku: GRUNT_przetarg_gmina.pdf
+[2018-01-16 14:41:29,660] {/home/ee/code/index_new.py:89} INFO - Start procesu konwertowania dla pliku: GRUNT_wolny_rynek_os._fizyczna_cz.2.pdf
+[2018-01-16 14:46:49,835] {/home/ee/code/index_new.py:89} INFO - Start procesu konwertowania dla pliku: GRUNT_wolny_rynek_os._fizyczna_cz.2.pdf
+[2018-01-16 14:56:16,860] {/home/ee/code/index_new.py:89} INFO - Start procesu konwertowania dla pliku: GRUNT_wolny_rynek_os._fizyczna.pdf
+[2018-01-16 14:59:43,181] {/home/ee/code/index_new.py:89} INFO - Start procesu konwertowania dla pliku: GRUNT_wolny_rynek_os._fizyczna.pdf
+[2018-01-16 15:01:25,604] {/home/ee/code/index_new.py:91} INFO - Koniec procesu konwertowania dla pliku: GRUNT_wolny_rynek_os._fizyczna.pdf
+[2018-01-16 15:04:22,027] {/home/ee/code/index_new.py:150} INFO - Start procesu usuwania plików
+[2018-01-16 15:04:22,032] {/home/ee/code/index_new.py:157} INFO - Koniec procesu usuwania plików
+[2018-01-16 15:04:25,647] {/home/ee/code/index_new.py:121} INFO - Start procesu konwertowania dla pliku: MP_wolny_rynek.pdf
+[2018-01-16 15:12:45,667] {/home/ee/code/index_new.py:121} INFO - Start procesu konwertowania dla pliku: MP_wolny_rynek.pdf
+[2018-01-16 15:50:12,337] {/home/ee/code/index_new.py:150} INFO - Start procesu usuwania plików
+[2018-01-16 15:50:12,340] {/home/ee/code/index_new.py:157} INFO - Koniec procesu usuwania plików
+[2018-01-16 15:51:13,877] {/home/ee/code/index_new.py:150} INFO - Start procesu usuwania plików
+[2018-01-16 15:51:13,882] {/home/ee/code/index_new.py:157} INFO - Koniec procesu usuwania plików
+[2018-01-16 15:51:18,085] {/home/ee/code/index_new.py:73} INFO - Start procesu konwertowania dla pliku: LU_biurowe_wolny_rynek.pdf
+[2018-01-16 15:51:28,629] {/home/ee/code/index_new.py:75} INFO - Koniec procesu konwertowania dla pliku: LU_biurowe_wolny_rynek.pdf
+[2018-01-16 15:51:51,984] {/home/ee/code/index_new.py:73} INFO - Start procesu konwertowania dla pliku: LU_biuroweprzetarg.pdf
+[2018-01-16 15:51:59,257] {/home/ee/code/index_new.py:75} INFO - Koniec procesu konwertowania dla pliku: LU_biuroweprzetarg.pdf
+[2018-01-16 15:55:12,466] {/home/ee/code/index_new.py:150} INFO - Start procesu usuwania plików
+[2018-01-16 15:55:12,470] {/home/ee/code/index_new.py:157} INFO - Koniec procesu usuwania plików
+[2018-01-16 15:55:18,189] {/home/ee/code/index_new.py:73} INFO - Start procesu konwertowania dla pliku: LU_biuroweprzetarg.pdf
+[2018-01-16 15:55:27,271] {/home/ee/code/index_new.py:75} INFO - Koniec procesu konwertowania dla pliku: LU_biuroweprzetarg.pdf
+[2018-01-16 15:56:00,906] {/home/ee/code/index_new.py:73} INFO - Start procesu konwertowania dla pliku: LU_biurowe_wolny_rynek.pdf
+[2018-01-16 15:56:10,395] {/home/ee/code/index_new.py:75} INFO - Koniec procesu konwertowania dla pliku: LU_biurowe_wolny_rynek.pdf
+[2018-01-16 15:56:44,737] {/home/ee/code/index_new.py:73} INFO - Start procesu konwertowania dla pliku: LU_usugowe_wolny_rynek.pdf
+[2018-01-16 15:57:22,057] {/home/ee/code/index_new.py:75} INFO - Koniec procesu konwertowania dla pliku: LU_usugowe_wolny_rynek.pdf
+[2018-01-17 07:35:34,681] {/home/ee/code/index_new.py:150} INFO - Start procesu usuwania plików
+[2018-01-17 07:35:34,681] {/home/ee/code/index_new.py:157} INFO - Koniec procesu usuwania plików
+[2018-01-17 07:35:38,944] {/home/ee/code/index_new.py:121} INFO - Start procesu konwertowania dla pliku: MP_wolny_rynek.pdf
