@@ -1,1 +1,3 @@
 [2018-01-17 12:03:10,539] {/home/ee/code/index_new.py:57} INFO - Start procesu konwertowania dla pliku: ZKK17.TE.6621.6709.2016_LOKALE_W.RYNEK.pdf
+[2018-01-17 18:25:21,086] {/home/ee/code/index_new.py:151} INFO - Start procesu usuwania plików
+[2018-01-17 18:25:21,096] {/home/ee/code/index_new.py:158} INFO - Koniec procesu usuwania plików

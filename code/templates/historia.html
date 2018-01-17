@@ -1,30 +1,39 @@
 <!doctype html>
-<title>Konwersja PDF2Excel</title>
+<title>Historia</title>
+<link rel="icon" href="{{ url_for('static', filename='logo.png')}}"/>
 <head>
 		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/default.css')}}" />
 		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/component.css')}}" />
 		<script src="{{ url_for('static', filename='js/modernizr.custom.js')}}"></script>
 </head>
 <div class="header">
-  <img src="{{ url_for('static', filename='logo.png')}}" alt="logo" />
 <h1> <center><font size="14" color="white">Historia</font></center></h1>
-</div>
-<hr>
+<body>
 
-<p><a class="btn btn-4 btn-4d icon-arrow-left" href="{{ url_for('index') }}">WRÓĆ</a></p>
+<div style="float:left; width:100%;">
+<p><a class="btn btn-4 btn-4d icon-arrow-left" height=10 href="{{ url_for('index') }}">WRÓĆ</a></p>
+</div>
 
 <div style="float:left; width:33%;">
 	<section class="color-9">
-	<font size="12" color="white">Lokale</font>
+	<h1><font size="12" color="black">Lokale Mieszkalne</font></h1>
 		{%- for item in tree_h_lokale %}
-	<p>	    <a class="btn1 btn1-10 btn1-10d icon-arrow-left" href="/static/backup/lokale/{{ item }}">{{ item }}</a></p>
+	<p>	    <a class="btn1 btn1-10 btn1-10d icon-arrow-left" href="/static/backup/lokale_mieszkalne/{{ item }}">{{ item }}</a></p>
 		    {%- endfor %}
 
 </div>
 
 <div style="float:left; width:33%;">
 	<section class="color-9">
-		<font size="12" color="white">Grunty</font>
+	<h1><font size="12" color="black">Lokale Użytkowe</font></h1>
+		{%- for item in tree_h_lokale_u %}
+	<p>	    <a class="btn1 btn1-10 btn1-10d icon-arrow-left" href="/static/backup/lokale_uslugowe/{{ item }}">{{ item }}</a></p>
+		    {%- endfor %}
+
+</div>
+<div style="float:left; width:33%;">
+	<section class="color-9">
+		<h1><font size="12" color="black">Grunty</font></h1>
 		{%- for item in tree_h_grunty %}
 	<p>	    <a class="btn1 btn1-10 btn1-10d icon-arrow-left" href="/static/backup/grunty/{{ item }}">{{ item }}</a></p>
 		    {%- endfor %}
@@ -32,10 +41,18 @@
 
 <div style="float:left; widt: 33%;">
 	<section class="color-9">
-	<center>	<font size="12" color="white">Budynki</font></center>
+<h1><font size="12" color="black">Budynki</font></h1>
 		{%- for item in tree_h_budynki %}
 	<p>	    <a class="btn1 btn1-10 btn1-10d icon-arrow-left" href="/static/backup/budynki/{{ item }}">{{ item }}</a></p>
 		    {%- endfor %}
 </div>
+<div style="float:left; widt: 33%;">
+	<section class="color-9">
+<h1><font size="12" color="black">Miesjca Postojowe</font></h1>
+		{%- for item in tree_h_mp %}
+	<p>	    <a class="btn1 btn1-10 btn1-10d icon-arrow-left" href="/static/backup/mp/{{ item }}">{{ item }}</a></p>
+		    {%- endfor %}
+</div>
+</body>
 </html>
 

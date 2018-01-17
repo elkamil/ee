@@ -1,16 +1,16 @@
 <!doctype html>
-<title>Emmerson Evaluation - Budynki</title>
+<title>Budynki</title>
+<link rel="icon" href="{{ url_for('static', filename='logo.png')}}"/>
 <head>
 		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/default.css')}}" />
 		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/component.css')}}" />
 		<script src="{{ url_for('static', filename='js/modernizr.custom.js')}}"></script>
 </head>
 <div class="header">
-  <img src="{{ url_for('static', filename='logo.png')}}" alt="logo" />
 <h1> <center><font size="14" color="white">Budynki</font></center></h1>
 </div>
-<hr>
 
+<body bgcolor="#fff">
 <div style="float:left; width:50%;">
 <form action="" method=post enctype=multipart/form-data>
 	<section class="color-4">
@@ -32,6 +32,6 @@
 		    {%- endfor %}
 
 </div>
-
+</body>
 </html>
 

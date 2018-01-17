@@ -1,7 +1,7 @@
 <!doctype html>
 <title>Emmerson Evaluation</title>
+<link rel="icon" href="{{ url_for('static', filename='logo.png')}}"/>
 <div class="header">
-  <img src="{{ url_for('static', filename='logo.png')}}" alt="logo" />
 <h1> <center><font size="14" color="white">Emmerson Evaluation</font></center></h1>
 </div>
  <!--link rel=stylesheet type=text/css class="btn btn-5" href="{{ url_for('static', filename='style.css') }}"a-->
@@ -12,18 +12,23 @@
 
 <form action="" method=post enctype=multipart/form-data>
 <!--body bgcolor="#2ecc71"-->
-<body bgcolor="#BC5888">
+<body bgcolor="#fff">
+<div style="float:right;display: inline-block; width:50%;vertical-align: middle">
 	<section class="color-9">
-<hr>
+  <img src="{{ url_for('static', filename='logo.png')}}" alt="logo" height="350" width="350" align="middle"/>
+</div>
 <a class="zr"></a>
+<div style="float:left; width:50%;">
+	<section class="color-9">
 <p>        <a class="btn btn-4 btn-4c icon-arrow-right" href="{{ url_for('lokale_mieszkalne') }}">LOKALE MIESZKALNE</a></p>
-<p>        <a class="btn btn-4 btn-4c icon-arrow-right" href="{{ url_for('lokale_uslugowe') }}">LOKALE USŁUGOWE</a></p>
+<p>        <a class="btn btn-4 btn-4c icon-arrow-right" href="{{ url_for('lokale_uslugowe') }}">LOKALE UŻYTKOWE</a></p>
 <p>        <a class="btn btn-4 btn-4c icon-arrow-right" href="{{ url_for('grunty') }}">GRUNTY</a></p>
 <p>        <a class="btn btn-4 btn-4c icon-arrow-right" href="{{ url_for('budynki') }}">BUDYNKI</a></p>
 <p>        <a class="btn btn-4 btn-4c icon-arrow-right" href="{{ url_for('mp') }}">MIEJSCA POSTOJOWE</a></p>
 <p>        <a class="btn btn-4 btn-4c icon-arrow-right" href="{{ url_for('history') }}">HISTORIA</a></p>
 <p>        <a class="btn btn-9 btn-9c icon-arrow-right" href="{{ url_for('shutdown') }}">WYŁĄCZ</a></p>
 	</section>
+</div>
 </body>
 </form>
 

@@ -22,7 +22,8 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: #89867e;
-	background: #BC5888;
+	/*background: #BC5888;*/
+	background: #fff;
 }
 
 a {
@@ -35,17 +36,23 @@ a:active {
 	color: #333;
 }
 
+.header {
+  background-color: #BC5888;
+  height: 100px;
+}
+
 .header img {
   float: right;
   width: 150px;
   height: 150px;
-  background: #555;
+  color: #BC5888;
 }
 
 .header h1 {
   position: relative;
   top: 15px;
   left: 10px;
+  color: #BC5888;
 }
 
 /* Header Style */
@@ -176,11 +183,13 @@ a:active {
 }
 
 .color-4 {
-	background: #BC5888;
+	/*background: #BC5888;*/
+	background: #fff;
 }
 
 .color-9 {
-	background: #BC5888;
+	background: #fff;
+	/*background: #BC5888;*/
 }
 
 .color-5 {
