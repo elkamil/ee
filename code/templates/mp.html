@@ -5,16 +5,19 @@
 		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/component.css')}}" />
 		<script src="{{ url_for('static', filename='js/modernizr.custom.js')}}"></script>
 </head>
-<center><font size="14" color="white">Miejsca Postojowe</font></center>
+<div class="header">
+  <img src="{{ url_for('static', filename='logo.png')}}" alt="logo" />
+<h1> <center><font size="14" color="white">Miejsca Postojowe</font></center></h1>
+</div>
 <hr>
 
 <div style="float:left; width:50%;">
 <form action="" method=post enctype=multipart/form-data>
-	<section class="color-4">
+	<section class="color-9">
 <p>	<input class="btn btn-4 btn-4c icon-arrow-right" type=file name=file size="80" accept=".pdf"></p>
 <p>	<input class="btn btn-4 btn-4c icon-arrow-right" type=submit value="Konwertuj na XLSX"></p>
 </form>
-<section class="color-4">
+<section class="color-9">
 <form action="/delete" method="post">
 <p> <button class="btn btn-4 btn-4c icon-arrow-right" name="forwardBtn" onclick="delete_files()" value="mp"> Usuń Pliki</button></p>
 </form>

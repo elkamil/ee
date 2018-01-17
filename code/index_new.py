@@ -11,6 +11,7 @@ import flask as fl
 import logging
 from logging.handlers import RotatingFileHandler
 from variables import folder, static_dir
+from shutdown import shutdown as shutdown_f
 
 
 def redirect_url():
@@ -170,7 +171,7 @@ def history():
     if request.method == 'POST':
         pass
     else:
-        return fl.render_template('historia.html', tree_h_lokale=make_tree(path_history_lokale_m),
+        return fl.render_template('historia.html', tree_h_lokale=make_tree(path_history_lokale_m)[:15],
                                   tree_h_lokale_u=make_tree(path_history_lokale_u),
                                   tree_h_budynki=make_tree(path_history_budynki),
                                   tree_h_grunty=make_tree(path_history_grunty),
@@ -180,6 +181,12 @@ def history():
                               tree_h_budynki=make_tree(path_history_budynki),
                               tree_h_grunty=make_tree(path_history_grunty),
                               tree_h_mp=make_tree(path_history_mp))
+
+
+@app.route('/shutdown', methods=['GET', 'POST'])
+def shutdown():
+    shutdown_f()
+    return fl.render_template('index.html')
 
 
 if __name__ == "__main__":
