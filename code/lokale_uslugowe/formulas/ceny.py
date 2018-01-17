@@ -6,6 +6,7 @@ Y = re.compile('Typ\\s?właś.*\\s?:\\s?(osoba fizyczna|\\s?osoba\\s?fizyczna|\\
 N = re.compile('.*Cena\\s?łączna\\snieruchomości\\s?:\\s?\\b([^zł]+)(?=\\s?z?ł?\\s?okre).*')
 Z_uwagi_do_ceny = re.compile('.*Uwagi\\s?do\\s?ceny\\s?:\\s?(.*?)(?=\\s?Nr\\s?dok).*', re.S)
 M = re.compile('.*Pow\\.\\s?użytk\\.\\s?:\\s?\\b(.*)(?=\\s?m\\s?kw\\.).*')
+G = re.compile('.*Cena\\s?:\\s?\\b([^zł]+)(?=\\s?z?ł?\\s?Cena\\s?1).*', re.IGNORECASE)
 
 ac_cena_brutto_mp2 = ['']
 
@@ -62,8 +63,34 @@ def ceny(line):
             n_cena_laczna.append('')
             bw_cena_brutto.append('')
     else:
-        n_cena_laczna.append('')
-        bw_cena_brutto.append('')
+        if G.search(line):
+            res6 = G.search(line)
+            res6prim = res6.group(1)
+            res6prim1 = re.sub(r'\s+', '', res6prim)
+            if res_y1 in ['osoba fizyczna', 'gmina']:
+                n_cena_laczna.append(res6prim1)
+                bw_cena_brutto.append(res6prim1)
+            elif res_y1 in ['osoba prawna']:
+                if brutto.search(uwagi_do_ceny) is None:
+                    if netto.search(uwagi_do_ceny) is not None:
+                        n_cena_laczna.append(round(float(res6prim1), 2))
+                        brutto = float(res6prim1)*1.23
+                        bw_cena_brutto.append(round(brutto, 2))
+                    else:
+                        bw_cena_brutto.append(round(float(res6prim1), 2))
+                        netto = float(res6prim1)/1.23
+                        n_cena_laczna.append(round(netto, 2))
+                        uwagi_do_ceny = "Brak informacji czy cena netto/brutto, ceny unettowiono " + uwagi_do_ceny
+                else:
+                    bw_cena_brutto.append(round(float(res6prim1), 2))
+                    netto = float(res6prim1)/1.23
+                    n_cena_laczna.append(round(netto, 2))
+            else:
+                bw_cena_brutto.append('')
+                n_cena_laczna.append('')
+        else:
+            bw_cena_brutto.append('')
+            n_cena_laczna.append('')
 
     # ceny per m2
     if M.search(line):

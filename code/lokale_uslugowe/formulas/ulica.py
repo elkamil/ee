@@ -48,7 +48,7 @@ def ulica(line):
             # print("2:",ulica_remove_wolny_rynek)
             l_nr_lokalu.append('')
             ulica_geo.append(ulica_remove_wolny_rynek)
-            if len(ulica_remove_wolny_rynek) == 0:
+            if len(ulica_remove_wolny_rynek) <= 1:
                 j_ulica.append('')
                 k_nr_domu.append('')
             else:

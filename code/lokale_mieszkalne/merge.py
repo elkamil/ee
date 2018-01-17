@@ -29,7 +29,6 @@ def if_statements(line):
 
     cena = ceny(line)
     kw_all = kw(line)
-    opis_all = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '', re.sub(r'\n', '', '{0};{1};{2};księga gruntowa: {3}' .format(cena[2], opis_f(line), dane_adresowe[7], kw_all[1])))))
 
     a_id = ['']
     b_data_transakcji = b_data(line)
@@ -56,7 +55,6 @@ def if_statements(line):
     w_stan_prawny_lokalu = ['Prawo własności']
     y_typ_wlasciciela = cena[0]
     x_stan_prawny_gruntu = stan_prawny(line)
-    z_opis = opis_all
     aa_konstrukcja_budynku = ['']
     ab_cena_brutto = cena[4]
     ac_cena_brutto_mp2 = cena[6]
@@ -114,6 +112,37 @@ def if_statements(line):
     cc_udzial = udzial(line)
     # ulica_geo = ['']
 
+    if cena[2]:
+        cena_opis = cena[2]
+    else:
+        cena_opis = ''
+
+    if opis_f(line):
+        opis_opis = opis_f(line)
+    else:
+        opis_opis = ''
+
+    if dane_adresowe[7]:
+        adres_opis = dane_adresowe[7]
+    else:
+        adres_opis = ''
+
+    if kw_all[1]:
+        kw_opis = 'księga gruntowa: {0}'.format(kw_all[1])
+    else:
+        kw_opis = ''
+
+    tt = ''
+    for i in [cena_opis, opis_opis, adres_opis, kw_opis]:
+        if i:
+            tt+=str(i) + ';'
+    tt = re.sub(r';$', '', re.sub(r'\n', '', tt))
+    # s_opis = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '',
+     #        re.sub(r'\n', '', '{0};{1};{2};księgi podane w RCiWN: {3};{4}' .format(cennik[2],
+     #        opis(line), dane_adresowe[6], nr_kw[1], uzbrojenie(line))))))
+    # t_opis = tt
+    # opis_all = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '', re.sub(r'\n', '', '{0};{1};{2};księga gruntowa: {3}' .format(cena[2], opis_f(line), dane_adresowe[7], kw_all[1])))))
+    z_opis = tt
     # a_id = geo(dane_ulica[0], dane_ulica[1])
     z = np.column_stack((a_id, b_data_transakcji, c_wojewodztwo, d_powiat, e_gmina, f_miejscowosc,
                          g_dzielnica, h_obreb_geodezyjny, i_arkusz, j_ulica, k_nr_domu, l_nr_lokalu,

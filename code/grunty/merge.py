@@ -86,9 +86,36 @@ def if_statements(line):
     bc_pozostale_obiekty = ['']
     bd_udzial = udzial(line)
     be_funkcja = funkcja(line)
-    s_opis = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '',
-             re.sub(r'\n', '', '{0};{1};{2};księgi podane w RCiWN: {3};{4}' .format(cennik[2],
-             opis(line), dane_adresowe[6], nr_kw[1], uzbrojenie(line))))))
+
+    if nr_kw[1]:
+        kw_opis = 'księgi podane w RCiWN: {0}'.format(nr_kw[1])
+    else:
+        kw_opis = ''
+
+    if opis(line):
+        opis_opis = opis(line)
+    else:
+        opis_opis = ''
+
+    if dane_adresowe[6]:
+        adres_opis = dane_adresowe[6]
+    else:
+        adres_opis = ''
+
+    if cennik[2]:
+        cena_opis = cennik[2]
+    else:
+        cena_opis = ''
+
+    tt = ''
+    for i in [cena_opis, opis_opis, adres_opis, kw_opis, uzbrojenie(line)]:
+        if i:
+            tt+=str(i) + ';'
+    tt = re.sub(r';$', '', re.sub(r'\n', '', tt))
+    # s_opis = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '',
+     #        re.sub(r'\n', '', '{0};{1};{2};księgi podane w RCiWN: {3};{4}' .format(cennik[2],
+     #        opis(line), dane_adresowe[6], nr_kw[1], uzbrojenie(line))))))
+    s_opis = tt
 
     z = np.column_stack((a_id, b_data_transakcji, c_wojewodztwo, d_powiat, e_gmina, f_miejscowosc, g_dzielnica,
                          h_obreb_geodezyjny, i_arkusz, j_ulica, k_nr_budynku, l_nr_dzialki, m_powierzchnia_gruntu,

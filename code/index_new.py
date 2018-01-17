@@ -131,7 +131,7 @@ def delete_files():
         if request.form['forwardBtn'] == 'lokale_mieszkalne':
             path = static_dir+'/lokale_mieszkalne/'
             # return_template = 'lokale_mieszkalne.html'
-            return_url = 'lokale'
+            return_url = 'lokale_mieszkalne'
         elif request.form['forwardBtn'] == 'lokale_uslugowe':
             path = static_dir+'/lokale_uslugowe/'
             # return_template = 'lokale_uslugowe.html'

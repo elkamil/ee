@@ -14,7 +14,7 @@ from mp.formulas.powierzchnia_uzytkowa import powierzchnia_uzytkowa
 from mp.formulas.nr_dok import nr_dok
 from mp.formulas.kw import kw
 # from mp.formulas.udzial import udzial
-from mp.formulas.opis import opis
+from mp.formulas.opis import opis as opis_f
 from mp.formulas.rodzaj_osoby import rodzaj_osoby
 
 # file = "/home/ee/ee_convert/data/obreby.csv"
@@ -88,10 +88,38 @@ def if_statements(line):
     az_wpisana_przez = ['']
     ba_modyfikowana_przez = ['']
     bb_winda = ['']
-    r_opis = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '',
-             re.sub(r'\n', '', '{0};{1};{2};księgi podane w RCiWN: {3}' .format(cena[2],
-             opis(line), dane_adresowe[6], kw_all[1], )))))
     # a_id = geo(dane_ulica[0], dane_ulica[1])
+    if cena[2]:
+        cena_opis = cena[2]
+    else:
+        cena_opis = ''
+
+    if opis_f(line):
+        opis_opis = opis_f(line)
+    else:
+        opis_opis = ''
+
+    if dane_adresowe[6]:
+        adres_opis = dane_adresowe[6]
+    else:
+        adres_opis = ''
+
+    if kw_all[1]:
+        kw_opis = 'księgi podane w RCiWn: {0}'.format(kw_all[1])
+    else:
+        kw_opis = ''
+
+    tt = ''
+    for i in [cena_opis, opis_opis, adres_opis, kw_opis]:
+        if i:
+            tt+=str(i) + ';'
+    tt = re.sub(r';$', '', re.sub(r'\n', '', tt))
+    # s_opis = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '',
+     #        re.sub(r'\n', '', '{0};{1};{2};księgi podane w RCiWN: {3};{4}' .format(cennik[2],
+     #        opis(line), dane_adresowe[6], nr_kw[1], uzbrojenie(line))))))
+    # t_opis = tt
+    # opis_all = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '', re.sub(r'\n', '', '{0};{1};{2};księga gruntowa: {3}' .format(cena[2], opis_f(line), dane_adresowe[7], kw_all[1])))))
+    r_opis = tt
     z = np.column_stack((a_id, b_data_transakcji, c_wojewodztwo, d_powiat, e_gmina, f_miejscowosc, g_dzielnica,
                          h_obreb_geodezyjny, i_arkusz, j_ulica, k_nr_budynku, l_nr_dzialki, m_oznaczenie,
                          n_pole_powierzchni, o_powierzchnia_uzytkowa, p_cena, q_cena_mp2pu, r_opis,

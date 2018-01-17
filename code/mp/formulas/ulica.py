@@ -46,7 +46,7 @@ def ulica(line):
             ulic = res4.group(2)
             ulica_remove_wolny_rynek = re.sub(r'(\s+|\s?)\((przetargowy|wolny).*\n.*', '', ulic)
             # j_ulica.append("ul. " + ulica_remove_wolny_rynek)
-            if len(ulica_remove_wolny_rynek) == 0:
+            if len(ulica_remove_wolny_rynek) <= 1:
                 j_ulica.append('')
                 k_nr_budynku.append('')
             else:
