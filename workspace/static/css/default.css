@@ -22,7 +22,7 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: #89867e;
-	background: #FF0090;
+	background: #BC5888;
 }
 
 a {
@@ -33,6 +33,19 @@ a {
 a:hover,
 a:active {
 	color: #333;
+}
+
+.header img {
+  float: right;
+  width: 150px;
+  height: 150px;
+  background: #555;
+}
+
+.header h1 {
+  position: relative;
+  top: 15px;
+  left: 10px;
 }
 
 /* Header Style */
@@ -163,7 +176,11 @@ a:active {
 }
 
 .color-4 {
-	background: #FF0090;
+	background: #BC5888;
+}
+
+.color-9 {
+	background: #BC5888;
 }
 
 .color-5 {
