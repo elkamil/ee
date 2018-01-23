@@ -86,6 +86,7 @@ def if_statements(line):
     bc_pozostale_obiekty = ['']
     bd_udzial = udzial(line)
     be_funkcja = funkcja(line)
+    xxx_ulica_geo = dane_ulica[3]
 
     if nr_kw[1]:
         kw_opis = 'księgi podane w RCiWN: {0}'.format(nr_kw[1])
@@ -128,6 +129,6 @@ def if_statements(line):
                          aq_cena_waluta, ar_waluta, as_kurs_waluty, at_prawo_do_wieczystego, au_dzial_iii_kw,
                          av_wartosc_rynkowa, aw_wartosc_odtworzeniowa, ax_stawka_VAT, ay_data_utworzenia,
                          az_data_modyfikacji, ba_wpisana_przez, bb_modyfikowana_przez, bc_pozostale_obiekty,
-                         bd_udzial, be_funkcja))
+                         bd_udzial, be_funkcja, xxx_ulica_geo))
 
     return z

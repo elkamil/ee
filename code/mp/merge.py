@@ -88,6 +88,7 @@ def if_statements(line):
     az_wpisana_przez = ['']
     ba_modyfikowana_przez = ['']
     bb_winda = ['']
+    xxx_ulica_geo = dane_ulica[4]
     # a_id = geo(dane_ulica[0], dane_ulica[1])
     if cena[2]:
         cena_opis = cena[2]
@@ -129,5 +130,6 @@ def if_statements(line):
                          ah_liczba_kondygnacji, ai_pozostale_obiekty, aj_kod_pocztowy, ak_osiedle, al_strefa_miasta,
                          am_otoczenie, an_dostepnosc, ao_zrodlo_ceny, ap_cena_waluta, aq_waluta, ar_kurs_waluty,
                          as_stan_prawny, at_dzial_kw, au_wartosc_rynkowa, av_wartosc_odtworzeniowa, aw_stawka_VAT,
-                         ax_data_utworzenia, ay_data_modyfikacji, az_wpisana_przez, ba_modyfikowana_przez, bb_winda))
+                         ax_data_utworzenia, ay_data_modyfikacji, az_wpisana_przez, ba_modyfikowana_przez, bb_winda,
+                         xxx_ulica_geo))
     return z

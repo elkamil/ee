@@ -1,7 +1,8 @@
 import numpy as np
 import re
 from lokale_mieszkalne.variables import *
-# from geo import geo
+from is_online import is_online
+from geo import geo
 
 from lokale_mieszkalne.formulas.b_data_transakcji import b_data
 from lokale_mieszkalne.formulas.lokalizacja import lokalizacja
@@ -110,6 +111,11 @@ def if_statements(line):
     ca_nr_dzialki = dane_adresowe[2]
     cb_pole_powierzchni_gruntu = pole_powierzchni(line)
     cc_udzial = udzial(line)
+    # xxx_ulica_geo = geo(j_ulica[0], nr_domu_code)
+    if is_online():
+        xxx_ulica_geo = geo(dane_ulica[5], dane_ulica[6])
+    else:
+        xxx_ulica_geo = ['']
     # ulica_geo = ['']
 
     if cena[2]:
@@ -161,8 +167,5 @@ def if_statements(line):
                          bn_dzial_3_grunt, bo_wartosc_rynkowa, bp_wartosc_odtworzeniowa, bq_stawka_vat,
                          br_mp_stawka_vat, bs_data_utworzenia, bt_data_modyfikacji, bu_wpisana_przez,
                          bv_modyfikowana_przez, bw_sw_ch_energ, bx_nr_sw_ch_energ, by_wsk_zapot, bz_wsk_zapot_EK,
-                         ca_nr_dzialki, cb_pole_powierzchni_gruntu,  cc_udzial))
-    # g = z.decode("utf-8")
-    # [re.sub(r'\s+$', '', i) for i in g]
-    # print(z)
+                         ca_nr_dzialki, cb_pole_powierzchni_gruntu,  cc_udzial, xxx_ulica_geo))
     return z

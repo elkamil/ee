@@ -1,4 +1,5 @@
-from lokale_uslugowe.variables import j_ulica, ulica_geo, k_nr_domu, l_nr_lokalu
+from lokale_uslugowe.variables import j_ulica, ulica_geo, k_nr_domu, l_nr_lokalu, xxx_ulica_geo
+from geo import geo
 import re
 from db_kody import create_connection as get_kod
 
@@ -43,9 +44,7 @@ def ulica(line):
             ulica_geo.append(ulica_remove_wolny_rynek)
         else:
             ulic = res4.group(2)
-            # print("1:",ulic)
             ulica_remove_wolny_rynek = re.sub(r'(\s+|\s?)\((przetargowy|wolny).*\n.*', '', ulic)
-            # print("2:",ulica_remove_wolny_rynek)
             l_nr_lokalu.append('')
             ulica_geo.append(ulica_remove_wolny_rynek)
             if len(ulica_remove_wolny_rynek) <= 1:
@@ -71,13 +70,10 @@ def ulica(line):
     except:
         pass
         nr_domu_code = ''
+    xxx_ulica_geo = geo(j_ulica[0], nr_domu_code)
     if j_ulica[0] and nr_domu_code:
         ulica_code = re.sub(r'^ul.\s?','',re.sub(r'\s+','',re.sub(r'[Źź]','z',re.sub(r'[Żż]','z',re.sub(r'[Śś]','s',re.sub(r'[óÓ]','o',re.sub(r'[Ńń]','',re.sub(r'[Łł]','l',re.sub(r'[Ćć]','c', re.sub(r'[Ęę]','e',re.sub(r'[ąĄ]','a',j_ulica[0]))))))))))).lower()
         kod = get_kod(ulica_code, nr_domu_code)
-        # print("Ulica:", ulica_code)
-        # print("Nr domu:", nr_domu_code)
     else:
         kod = ['']
-        print("Ulica:", j_ulica)
-        print("Nr domu poprawiony:{0} ||| Nr domu original:{1}".format(nr_domu_code,k_nr_domu))
-    return j_ulica, k_nr_domu, l_nr_lokalu, ulica_geo, kod
+    return j_ulica, k_nr_domu, l_nr_lokalu, ulica_geo, kod, xxx_ulica_geo

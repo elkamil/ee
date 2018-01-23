@@ -52,6 +52,7 @@ ay_data_modyfikacji = ['']
 az_wpisana_przez = ['']
 ba_modyfikowana_przez = ['']
 bb_winda = ['']
+xxx_ulica_geo = ['']
 
 header_csv = ["Id", "Data transakcji / wyceny", "Województwo", "Powiat", "Gmina", "Miejscowość", "Dzielnica",
               "Obręb geodezyjny", "Arkusz mapy", "Ulica", "Nr budynku", "Numer działki",
@@ -64,7 +65,7 @@ header_csv = ["Id", "Data transakcji / wyceny", "Województwo", "Powiat", "Gmina
               "Otoczenie", "Dostępność komunikacyjna", "Źródło ceny", "Cena (waluta)", "Waluta",
               "Kurs waluty z daty transakcji jeżeli watuta inna niż PLN", "Stan prawny budynek",
               "Dział III KW gruntu", "Wartość rynkowa", "Wartość odtworzeniowa", "Stawka VAT",
-              "Data utworzenia", "Data modyfikacji", "Wpisana przez", "Modyfikowana przez", "Winda"]
+              "Data utworzenia", "Data modyfikacji", "Wpisana przez", "Modyfikowana przez", "Winda", "Street View"]
 
 
 kolumny = [a_id, b_data_transakcji, c_wojewodztwo, d_powiat, e_gmina, f_miejscowosc, g_dzielnica, h_obreb_geodezyjny,
@@ -75,7 +76,7 @@ kolumny = [a_id, b_data_transakcji, c_wojewodztwo, d_powiat, e_gmina, f_miejscow
            ai_pozostale_obiekty, aj_kod_pocztowy, ak_osiedle, al_strefa_miasta, am_otoczenie, an_dostepnosc,
            ao_zrodlo_ceny, ap_cena_waluta, aq_waluta, ar_kurs_waluty, as_stan_prawny, at_dzial_kw,
            au_wartosc_rynkowa, av_wartosc_odtworzeniowa, aw_stawka_VAT, ax_data_utworzenia, ay_data_modyfikacji,
-           az_wpisana_przez, ba_modyfikowana_przez, bb_winda]
+           az_wpisana_przez, ba_modyfikowana_przez, bb_winda, xxx_ulica_geo]
 kolumny1 = ["a_id", "b_data_transakcji", "c_wojewodztwo", "d_powiat", "e_gmina", "f_miejscowosc",
             "g_dzielnica", "h_obreb_geodezyjny", "i_arkusz", "h_obreb_geodezyjny", "j_ulica",
             "k_nr_domu", "l_nr_lokalu", "m_powierzchnia_uzytkowa", "n_cena_laczna", "o_cena_mp2",

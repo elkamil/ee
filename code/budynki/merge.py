@@ -111,6 +111,7 @@ def if_statements(line):
     bx_udzial = udzial(line)
     by_funkcja = funkcja(line)
     bz_przeznaczenie_terenu = przeznaczenie_terenu(line)
+    xxx_ulica_geo = dane_ulica[3]
 
     #t_opis = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '',
     #         re.sub(r'\n', '', '{0};{1};{2};księgi podane w RCiWN: {3};{4}' .format(cennik[2],
@@ -129,7 +130,6 @@ def if_statements(line):
         adres_opis = dane_adresowe[6]
     else:
         adres_opis = ''
-
     if kw_all[1]:
         kw_opis = 'księgi podane w RCiWN: {0}'.format(kw_all[1])
     else:
@@ -167,5 +167,5 @@ def if_statements(line):
                          bm_data_utworzenia, bn_data_modyfikacji, bo_wpisana_przez, bp_modyfikowana_przez,
                          bq_winda, br_swiadectwo_ch,
                          bs_nr_sw_ener, bt_wskaznik_ep, bu_wskaznik_ek, bv_garaz, bw_inne_pomieszczenia, bx_udzial,
-                         by_funkcja, bz_przeznaczenie_terenu))
+                         by_funkcja, bz_przeznaczenie_terenu, xxx_ulica_geo))
     return z

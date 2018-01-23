@@ -1,6 +1,7 @@
 import numpy as np
 import re
 from lokale_uslugowe.variables import *
+from online import is_connected
 # from geo import geo
 
 from lokale_uslugowe.formulas.b_data_transakcji import b_data
@@ -105,6 +106,10 @@ def if_statements(line):
     bu_nr_dzialki = dane_adresowe[2]
     bv_pole_powierzchni_gruntu = pole_powierzchni(line)
     bw_cena_brutto = cena[4]
+    if is_connected:
+        xxx_ulica_geo = dane_ulica[5]
+    else:
+        xxx_ulica_geo = ['']
 
     # y_typ_wlasciciela = cena[0]
     # cc_udzial = udzial(line)
@@ -134,14 +139,8 @@ def if_statements(line):
         if i:
             tt+=str(i) + ';'
     tt = re.sub(r';$', '', re.sub(r'\n', '', tt))
-    # s_opis = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '',
-     #        re.sub(r'\n', '', '{0};{1};{2};księgi podane w RCiWN: {3};{4}' .format(cennik[2],
-     #        opis(line), dane_adresowe[6], nr_kw[1], uzbrojenie(line))))))
-    # t_opis = tt
-    # opis_all = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '', re.sub(r'\n', '', '{0};{1};{2};księga gruntowa: {3}' .format(cena[2], opis_f(line), dane_adresowe[7], kw_all[1])))))
     z_opis = tt
 
-    # a_id = geo(dane_ulica[0], dane_ulica[1])
     z = np.column_stack((a_id, b_data_transakcji, c_wojewodztwo, d_powiat, e_gmina, f_miejscowosc, g_dzielnica,
                          h_obreb_geodezyjny, i_arkusz, j_ulica, k_nr_domu, l_nr_lokalu, m_powierzchnia_uzytkowa,
                          n_cena_laczna, o_cena_mp2, p_kondygnacja, q_liczba_kondygnacji, r_liczba_izb, s_rok_budowy,
@@ -156,8 +155,5 @@ def if_statements(line):
                          bg_kurs_waluty, bh_stan_prawny_budynku, bi_dzial_3, bj_dzial_3_grunt, bk_wartosc_rynkowa,
                          bl_wartosc_odtworzeniowa, bm_data_utworzenia, bn_data_modyfikacji, bo_wpisana_przez,
                          bp_modyfikowana_przez, bq_sw_ch_energ, br_nr_sw_ch_energ, bs_wsk_zapot, bt_wsk_zapot_EK,
-                         bu_nr_dzialki, bv_pole_powierzchni_gruntu, bw_cena_brutto))
-    # g = z.decode("utf-8")
-    # [re.sub(r'\s+$', '', i) for i in g]
-    # print(z)
+                         bu_nr_dzialki, bv_pole_powierzchni_gruntu, bw_cena_brutto, xxx_ulica_geo))
     return z

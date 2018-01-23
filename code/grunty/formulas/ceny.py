@@ -24,7 +24,6 @@ def ceny(line):
     else:
         uwagi_do_ceny = ''
 
-    # print(N.search(line))
     if N.search(line):
         res6 = N.search(line)
         res6prim = res6.group(1)
@@ -80,20 +79,6 @@ def ceny(line):
         else:
             x_cena_brutto.append('')
             n_cena_laczna.append('')
-    # cena brutto
-    # if ab_cena_brutto[0] !='' and m_powierzchnia_uzytkowa[0] !='':
-        # brutto_za_m2=float(ab_cena_brutto[0])/float(m_powierzchnia_uzytkowa[0])
-        # ac_cena_brutto_mp2.append(round(brutto_za_m2,2))
-    # else:
-        # ac_cena_brutto_mp2.append('')
-
-    # cena netto
-    # if n_cena_laczna[0] !='' and m_powierzchnia_uzytkowa[0] !='' :
-        # netto_za_m2=float(n_cena_laczna[0])/float(m_powierzchnia_uzytkowa[0])
-        # o_cena_mp2.append(round(netto_za_m2,2))
-    # else:
-        # o_cena_mp2.append('')
-    # print(n_cena_laczna)
     if n_cena_laczna[0]:
         n_cena_laczna_2f = ['%.2f' % elem for elem in [float(i) for i in n_cena_laczna]]
     else:

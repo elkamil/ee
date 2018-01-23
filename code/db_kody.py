@@ -9,7 +9,6 @@ def create_connection(ulica, nr_domu):
     try:
         conn = sqlite3.connect(db_file)
         cur = conn.cursor()
-        # print(nr_domu % 2)
         if nr_domu % 2 == 0:
             kod_query = "select kod from kody where ulica like '%{0}%' and parzyste_od <= {1} and parzyste_do >= {1} and miasto = 'wroclaw'".format(ulica, nr_domu)
         else:
@@ -22,7 +21,6 @@ def create_connection(ulica, nr_domu):
         else:
             z = ['']
 
-        # print(rows)
 
     except Error as e:
         print(e)
@@ -31,4 +29,3 @@ def create_connection(ulica, nr_domu):
     return z
 
 
-# create_connection("kamienskiego")

@@ -75,6 +75,7 @@ bv_pole_powierzchni_gruntu = ['']
 bw_cena_brutto = ['']
 ulica_geo = ['']
 y_typ_wlasciciela = ['']
+xxx_ulica_geo = ['']
 
 
 header_csv = ["Id", "Data transakcji / wyceny", "Województwo", "Powiat", "Gmina", "Miejscowość", "Dzielnica",
@@ -95,7 +96,8 @@ header_csv = ["Id", "Data transakcji / wyceny", "Województwo", "Powiat", "Gmina
               "Wartość rynkowa", "Wartość odtworzeniowa", "Data utworzenia", "Data modyfikacji", "Wpisana przez",
               "Modyfikowana przez", "Świadectwo charakterystyki energetycznej", "Nr św. ch. energetycznej",
               "Wskaźnik zapotrzebowania na energię pierwotną (EP)",
-              "Wskaźnik zapotrzebowania na energię pierwotną (EK)", "Numer działki", "Pow. działki", "Cena brutto"]
+              "Wskaźnik zapotrzebowania na energię pierwotną (EK)", "Numer działki", "Pow. działki", "Cena brutto",
+              "Street View"]
 
 kolumny = [a_id, b_data_transakcji, c_wojewodztwo, d_powiat, e_gmina, f_miejscowosc, g_dzielnica, h_obreb_geodezyjny,
            i_arkusz, j_ulica, k_nr_domu, l_nr_lokalu, m_powierzchnia_uzytkowa, n_cena_laczna, o_cena_mp2,
@@ -110,4 +112,4 @@ kolumny = [a_id, b_data_transakcji, c_wojewodztwo, d_powiat, e_gmina, f_miejscow
            bh_stan_prawny_budynku, bi_dzial_3, bj_dzial_3_grunt, bk_wartosc_rynkowa, bl_wartosc_odtworzeniowa,
            bm_data_utworzenia, bn_data_modyfikacji, bo_wpisana_przez, bp_modyfikowana_przez, bq_sw_ch_energ,
            br_nr_sw_ch_energ, bs_wsk_zapot, bt_wsk_zapot_EK, bu_nr_dzialki, bv_pole_powierzchni_gruntu,
-           bw_cena_brutto, y_typ_wlasciciela]
+           bw_cena_brutto, y_typ_wlasciciela, xxx_ulica_geo]

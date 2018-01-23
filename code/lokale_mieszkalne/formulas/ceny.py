@@ -85,9 +85,6 @@ def ceny(line):
     else:
         o_cena_mp2.append('')
 
-    # print("1:",ac_cena_brutto_mp2)
-    # print("1a:",ac_cena_brutto_mp2[0])
-    # print(len(ac_cena_brutto_mp2))
 
     if n_cena_laczna[0]:
         n_cena_laczna_2f = ['%.2f' % elem for elem in [float(i) for i in n_cena_laczna]]
@@ -105,7 +102,6 @@ def ceny(line):
         o_cena_mp2_2f = ['%.2f' % elem for elem in [float(i) for i in o_cena_mp2]]
     else:
         o_cena_mp2_2f = ['']
-    # print("2:",ac_cena_brutto_mp2_2f)
     return y_typ_wlasciciela, aj_sprzedajacy, uwagi_do_ceny, n_cena_laczna_2f, ab_cena_brutto_2f,\
            m_powierzchnia_uzytkowa, ac_cena_brutto_mp2_2f, o_cena_mp2_2f
 

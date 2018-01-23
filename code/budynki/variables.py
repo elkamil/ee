@@ -76,6 +76,7 @@ bw_inne_pomieszczenia = ['']
 bx_udzial = ['']
 by_funkcja = ['']
 bz_przeznaczenie_terenu = ['']
+xxx_ulica_geo = ['']
 
 header_csv = ["Id", "Data transakcji / wyceny", "Województwo", "Powiat", "Gmina", "Miejscowość", "Dzielnica",
               "Obręb geodezyjny", "Arkusz mapy", "Ulica", "Nr budynku", "Numer działki",
@@ -97,7 +98,8 @@ header_csv = ["Id", "Data transakcji / wyceny", "Województwo", "Powiat", "Gmina
               "Wartość odtworzeniowa", "Stawka VAT", "Data utworzenia", "Data modyfikacji", "Wpisana przez",
               "Modyfikowana przez", "Winda", "Świadectwo charakterystyki energetycznej", "Nr św. ch. energetycznej",
               "Wskaźnik zapotrzebowania na energię pierwotną (EP)", "Wskaźnik zapotrzebowania na energię końcową (EK)",
-              "Garaż", "Pomieszczenia inne przynależne - opis", "Udział", "Funkcja", "Przeznaczenie terenu"]
+              "Garaż", "Pomieszczenia inne przynależne - opis", "Udział", "Funkcja", "Przeznaczenie terenu",
+              "Street View"]
 
 kolumny = [a_id, b_data_transakcji, c_wojewodztwo, d_powiat, e_gmina, f_miejscowosc, g_dzielnica, h_obreb_geodezyjny,
            i_arkusz, j_ulica, k_nr_budynku, l_nr_dzialki, m_powierzchnia_gruntu, n_powierzchnia_uzytkowa,
@@ -114,4 +116,4 @@ kolumny = [a_id, b_data_transakcji, c_wojewodztwo, d_powiat, e_gmina, f_miejscow
            bh_prawo_do_wieczystego, bi_dzial_iii_kw, bj_wartosc_rynkowa, bk_wartosc_odtworzeniowa, bl_stawka_vat,
            bm_data_utworzenia, bn_data_modyfikacji, bo_wpisana_przez, bp_modyfikowana_przez, bq_winda, br_swiadectwo_ch,
            bs_nr_sw_ener, bt_wskaznik_ep, bu_wskaznik_ek, bv_garaz, bw_inne_pomieszczenia, bx_udzial, by_funkcja,
-           bz_przeznaczenie_terenu]
+           bz_przeznaczenie_terenu, xxx_ulica_geo]

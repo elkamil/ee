@@ -12,11 +12,11 @@
 
 <div style="float:left; width:50%;">
 <form action="" method=post enctype=multipart/form-data>
-	<section class="color-4">
+	<!--section class="color-4"-->
 <p>	<input class="btn btn-4 btn-4c icon-arrow-right" type=file name=file size="80" accept=".pdf"></p>
 <p>	<input class="btn btn-4 btn-4c icon-arrow-right" type=submit value="Konwertuj na XLSX"></p>
 </form>
-<section class="color-4">
+<!--section class="color-4"-->
 <form action="/delete" method="post">
 <p> <button class="btn btn-4 btn-4c icon-arrow-right" name="forwardBtn" onclick="delete_files()" value="grunty"> Usuń Pliki</button></p>
 </form>
@@ -24,7 +24,7 @@
 </div>
 
 <div style="float:right; width:50%;">
-	<section class="color-9">
+	<!--section class="color-9"-->
 		{%- for item in tree %}
 	<p>	    <a class="btn btn-4 btn-4d icon-arrow-left" href="/static/grunty/{{ item }}">{{ item }}</a></p>
 		    {%- endfor %}

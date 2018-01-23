@@ -55,6 +55,7 @@ bb_modyfikowana_przez = ['']
 bc_pozostale_obiekty = ['']
 bd_udzial = ['']
 be_funkcja = ['']
+xxx_ulica_geo = ['']
 
 header_csv = ["Id", "Data transakcji / wyceny", "Województwo", "Powiat", "Gmina", "Miejscowość", "Dzielnica",
               "Obręb geodezyjny", "Arkusz mapy", "Ulica", "Nr budynku", "Numer działki",
@@ -68,7 +69,7 @@ header_csv = ["Id", "Data transakcji / wyceny", "Województwo", "Powiat", "Gmina
               "Kurs waluty z daty transakcji jeżeli watuta inna niż PLN",
               "Prawo do wieczystego uzytkowania gruntu - do kiedy", "Dział III KW gruntu", "Wartość rynkowa",
               "Wartość odtworzeniowa", "Stawka VAT", "Data utworzenia", "Data modyfikacji", "Wpisana przez",
-              "Modyfikowana przez", "Pozostałe obiekty", "Udział", "Funkcja"]
+              "Modyfikowana przez", "Pozostałe obiekty", "Udział", "Funkcja", "Street View"]
 
 kolumny = [a_id, b_data_transakcji, c_wojewodztwo, d_powiat, e_gmina, f_miejscowosc, g_dzielnica,
            h_obreb_geodezyjny, i_arkusz, j_ulica, k_nr_budynku, l_nr_dzialki, m_powierzchnia_gruntu,

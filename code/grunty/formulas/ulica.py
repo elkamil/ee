@@ -1,5 +1,6 @@
 import re
-from grunty.variables import j_ulica, k_nr_budynku
+from geo import geo
+from grunty.variables import j_ulica, k_nr_budynku, xxx_ulica_geo
 from db_kody import create_connection as get_kod
 
 
@@ -60,13 +61,10 @@ def ulica(line):
     except:
         pass
         nr_domu_code = ''
+    xxx_ulica_geo = geo(j_ulica[0], nr_domu_code)
     if j_ulica[0] and nr_domu_code:
         ulica_code = re.sub(r'^ul.\s?','',re.sub(r'\s+','',re.sub(r'[Źź]','z',re.sub(r'[Żż]','z',re.sub(r'[Śś]','s',re.sub(r'[óÓ]','o',re.sub(r'[Ńń]','',re.sub(r'[Łł]','l',re.sub(r'[Ćć]','c', re.sub(r'[Ęę]','e',re.sub(r'[ąĄ]','a',j_ulica[0]))))))))))).lower()
         kod = get_kod(ulica_code, nr_domu_code)
-        # print("Ulica:", ulica_code)
-        # print("Nr domu:", nr_domu_code)
     else:
         kod = ['']
-        # print("Ulica:", j_ulica)
-        # print("Nr domu poprawiony:{0} ||| Nr domu original:{1}".format(nr_domu_code,k_nr_budynku))
-    return j_ulica, k_nr_budynku, kod
+    return j_ulica, k_nr_budynku, kod, xxx_ulica_geo
