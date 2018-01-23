@@ -1,8 +1,8 @@
 import numpy as np
 import re
 from lokale_uslugowe.variables import *
-from online import is_connected
-# from geo import geo
+from is_online import is_online
+from geo import geo
 
 from lokale_uslugowe.formulas.b_data_transakcji import b_data
 from lokale_uslugowe.formulas.lokalizacja import lokalizacja
@@ -106,8 +106,10 @@ def if_statements(line):
     bu_nr_dzialki = dane_adresowe[2]
     bv_pole_powierzchni_gruntu = pole_powierzchni(line)
     bw_cena_brutto = cena[4]
-    if is_connected:
-        xxx_ulica_geo = dane_ulica[5]
+
+    print(is_online())
+    if is_online():
+        xxx_ulica_geo = geo(dane_ulica[5], dane_ulica[6])
     else:
         xxx_ulica_geo = ['']
 

@@ -1,4 +1,6 @@
 import re
+from geo import geo
+from is_online import is_online
 # from itertools import islice
 import numpy as np
 from grunty.variables import kolumny
@@ -15,6 +17,7 @@ from grunty.formulas.nr_dok import nr_dok
 from grunty.formulas.kw import kw
 from grunty.formulas.opis import opis
 from grunty.formulas.uzbrojenie import uzbrojenie
+from grunty.formulas.przeznaczenie_terenu import przeznaczenie_terenu
 
 
 def if_statements(line):
@@ -86,7 +89,10 @@ def if_statements(line):
     bc_pozostale_obiekty = ['']
     bd_udzial = udzial(line)
     be_funkcja = funkcja(line)
-    xxx_ulica_geo = dane_ulica[3]
+    if is_online():
+        xxx_ulica_geo = geo(dane_ulica[3], dane_ulica[4])
+    else:
+        xxx_ulica_geo = ['']
 
     if nr_kw[1]:
         kw_opis = 'księgi podane w RCiWN: {0}'.format(nr_kw[1])
@@ -108,8 +114,14 @@ def if_statements(line):
     else:
         cena_opis = ''
 
+    prz_ter = przeznaczenie_terenu(line)
+    if prz_ter[0]:
+        przez_ter = prz_ter[0]
+    else:
+        przez_ter = ''
+
     tt = ''
-    for i in [cena_opis, opis_opis, adres_opis, kw_opis, uzbrojenie(line)]:
+    for i in [cena_opis, opis_opis, adres_opis, kw_opis, uzbrojenie(line), przez_ter]:
         if i:
             tt+=str(i) + ';'
     tt = re.sub(r';$', '', re.sub(r'\n', '', tt))

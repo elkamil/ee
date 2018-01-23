@@ -1,6 +1,6 @@
-from mp.variables import j_ulica, k_nr_budynku, m_oznaczenie, xxx_ulica_geo
+from mp.variables import j_ulica, k_nr_budynku, m_oznaczenie
 from db_kody import create_connection as get_kod
-from geo import geo
+# from geo import geo
 import re
 
 J = re.compile('\\d+\\s?\\.\\s?([^,]+)\\s?,\\s?([^\\d]+)\\s?((?!m\\.).*)\\s?m\\.\\s?([^(\\s]+)\\s?.*')
@@ -72,10 +72,10 @@ def ulica(line):
     except:
         pass
         nr_domu_code = ''
-    xxx_ulica_geo = geo(j_ulica[0], nr_domu_code)
+    # xxx_ulica_geo = geo(j_ulica[0], nr_domu_code)
     if j_ulica[0] and nr_domu_code:
         ulica_code = re.sub(r'^ul.\s?','',re.sub(r'\s+','',re.sub(r'[Źź]','z',re.sub(r'[Żż]','z',re.sub(r'[Śś]','s',re.sub(r'[óÓ]','o',re.sub(r'[Ńń]','',re.sub(r'[Łł]','l',re.sub(r'[Ćć]','c', re.sub(r'[Ęę]','e',re.sub(r'[ąĄ]','a',j_ulica[0]))))))))))).lower()
         kod = get_kod(ulica_code, nr_domu_code)
     else:
         kod = ['']
-    return j_ulica, k_nr_budynku, m_oznaczenie, kod, xxx_ulica_geo
+    return j_ulica, k_nr_budynku, m_oznaczenie, kod, j_ulica[0], nr_domu_code

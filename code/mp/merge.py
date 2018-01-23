@@ -1,7 +1,8 @@
 import re
 import numpy as np
 from mp.variables import *
-# from geo import geo
+from geo import geo
+from is_online import is_online
 
 from mp.formulas.b_data_transakcji import b_data
 from mp.formulas.lokalizacja import lokalizacja
@@ -88,8 +89,10 @@ def if_statements(line):
     az_wpisana_przez = ['']
     ba_modyfikowana_przez = ['']
     bb_winda = ['']
-    xxx_ulica_geo = dane_ulica[4]
-    # a_id = geo(dane_ulica[0], dane_ulica[1])
+    if is_online():
+        xxx_ulica_geo = geo(dane_ulica[4], dane_ulica[5])
+    else:
+        xxx_ulica_geo = ['']
     if cena[2]:
         cena_opis = cena[2]
     else:
@@ -113,11 +116,11 @@ def if_statements(line):
     tt = ''
     for i in [cena_opis, opis_opis, adres_opis, kw_opis]:
         if i:
-            tt+=str(i) + ';'
+            tt += str(i) + ';'
     tt = re.sub(r';$', '', re.sub(r'\n', '', tt))
     # s_opis = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '',
-     #        re.sub(r'\n', '', '{0};{1};{2};księgi podane w RCiWN: {3};{4}' .format(cennik[2],
-     #        opis(line), dane_adresowe[6], nr_kw[1], uzbrojenie(line))))))
+    # re.sub(r'\n', '', '{0};{1};{2};księgi podane w RCiWN: {3};{4}' .format(cennik[2],
+    # opis(line), dane_adresowe[6], nr_kw[1], uzbrojenie(line))))))
     # t_opis = tt
     # opis_all = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '', re.sub(r'\n', '', '{0};{1};{2};księga gruntowa: {3}' .format(cena[2], opis_f(line), dane_adresowe[7], kw_all[1])))))
     r_opis = tt

@@ -1,5 +1,5 @@
-from lokale_uslugowe.variables import j_ulica, ulica_geo, k_nr_domu, l_nr_lokalu, xxx_ulica_geo
-from geo import geo
+from lokale_uslugowe.variables import j_ulica, ulica_geo, k_nr_domu, l_nr_lokalu
+# from geo import geo
 import re
 from db_kody import create_connection as get_kod
 
@@ -70,10 +70,10 @@ def ulica(line):
     except:
         pass
         nr_domu_code = ''
-    xxx_ulica_geo = geo(j_ulica[0], nr_domu_code)
+    # xxx_ulica_geo = geo(j_ulica[0], nr_domu_code)
     if j_ulica[0] and nr_domu_code:
         ulica_code = re.sub(r'^ul.\s?','',re.sub(r'\s+','',re.sub(r'[Źź]','z',re.sub(r'[Żż]','z',re.sub(r'[Śś]','s',re.sub(r'[óÓ]','o',re.sub(r'[Ńń]','',re.sub(r'[Łł]','l',re.sub(r'[Ćć]','c', re.sub(r'[Ęę]','e',re.sub(r'[ąĄ]','a',j_ulica[0]))))))))))).lower()
         kod = get_kod(ulica_code, nr_domu_code)
     else:
         kod = ['']
-    return j_ulica, k_nr_domu, l_nr_lokalu, ulica_geo, kod, xxx_ulica_geo
+    return j_ulica, k_nr_domu, l_nr_lokalu, ulica_geo, kod, j_ulica[0], nr_domu_code

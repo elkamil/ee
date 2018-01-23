@@ -34,16 +34,16 @@ def ceny(line):
             if brutto.search(uwagi_do_ceny) is None:
                 if netto.search(uwagi_do_ceny) is not None:
                     p_cena.append(round(float(res6prim1), 2))
-                    brutto = float(res6prim1)*1.23
+                    brutto = float(res6prim1)*1.08
                     u_cena_brutto.append(round(brutto, 2))
                 else:
                     u_cena_brutto.append(round(float(res6prim1), 2))
-                    netto = float(res6prim1)/1.23
+                    netto = float(res6prim1)/1.08
                     p_cena.append(round(netto, 2))
                     uwagi_do_ceny = "Brak informacji czy cena netto/brutto, ceny unettowiono " + uwagi_do_ceny
             else:
                 u_cena_brutto.append(round(float(res6prim1), 2))
-                netto = float(res6prim1)/1.23
+                netto = float(res6prim1)/1.08
                 p_cena.append(round(netto, 2))
         else:
             u_cena_brutto.append('')

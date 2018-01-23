@@ -43,7 +43,7 @@ def OCR2CSV(wybor):
         pbar_ocr2csv.update(1)
     finito.close()
     pbar_ocr2csv.close()
-#     CSV2XLSX('budy', wybor)
+    # CSV2XLSX('budy', wybor)
 
 
-# OCR2CSV(1)
+# OCR2CSV(4)

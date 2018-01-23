@@ -1,6 +1,6 @@
 import re
 import numpy as np
-# from geo import geo
+from geo import geo
 from budynki.variables import *
 # from budynki.regexp import *
 from budynki.formulas.b_data import b_data
@@ -20,6 +20,7 @@ from budynki.formulas.kw import kw
 from budynki.formulas.przeznaczenie_terenu import przeznaczenie_terenu
 from budynki.formulas.opis import opis
 from budynki.formulas.uzbrojenie import uzbrojenie
+from is_online import is_online
 
 
 def if_statements(line):
@@ -111,7 +112,11 @@ def if_statements(line):
     bx_udzial = udzial(line)
     by_funkcja = funkcja(line)
     bz_przeznaczenie_terenu = przeznaczenie_terenu(line)
-    xxx_ulica_geo = dane_ulica[3]
+
+    if is_online():
+        xxx_ulica_geo = geo(dane_ulica[3], dane_ulica[4])
+    else:
+        xxx_ulica_geo = ['']
 
     #t_opis = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '',
     #         re.sub(r'\n', '', '{0};{1};{2};księgi podane w RCiWN: {3};{4}' .format(cennik[2],
