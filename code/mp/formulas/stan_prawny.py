@@ -1,13 +1,13 @@
+from mp.variables import w_stan_prawny_gruntu
 import re
-from mp.variables import x_stan_prawny_gruntu
 
 X = re.compile('Sprzedał\\s?:\\s?(.*)\\s+-.*')
 
 
-def stan_prawny(line):
+def stan_prawny_gruntu(line):
     if X.search(line):
         res1 = X.search(line)
-        x_stan_prawny_gruntu.append(res1.group(1))
+        w_stan_prawny_gruntu.append(res1.group(1))
     else:
-        x_stan_prawny_gruntu.append('')
-    return x_stan_prawny_gruntu
+        w_stan_prawny_gruntu.append('')
+    return w_stan_prawny_gruntu

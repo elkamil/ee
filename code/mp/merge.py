@@ -8,7 +8,7 @@ from mp.formulas.b_data_transakcji import b_data
 from mp.formulas.lokalizacja import lokalizacja
 from mp.formulas.ulica import ulica
 from mp.formulas.ceny import ceny
-# from mp.formulas.stan_prawny import stan_prawny
+from mp.formulas.stan_prawny import stan_prawny_gruntu
 # from mp.formulas.rodzaj_budynku import rodzaj_budynku
 from mp.formulas.pole_powierzchni import pole_powierzchni
 from mp.formulas.powierzchnia_uzytkowa import powierzchnia_uzytkowa
@@ -57,7 +57,7 @@ def if_statements(line):
     t_rok_budowy = ['']
     u_cena_brutto = cena[1]
     v_cena_brutto_mp2 = ['']
-    w_stan_prawny_gruntu = ['']
+    w_stan_prawny_gruntu = stan_prawny_gruntu(line)
     x_nr_kw = kw_all[0]
     y_sad = ['Sąd Rejonowy dla Wrocławia - Krzyków']
     z_nr_aktu = nr_dok(line)
