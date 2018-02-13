@@ -113,7 +113,9 @@ def if_statements(line):
     cc_udzial = udzial(line)
     # xxx_ulica_geo = geo(j_ulica[0], nr_domu_code)
     if is_online():
-        xxx_ulica_geo = geo(dane_ulica[5], dane_ulica[6])
+        geo_data = geo(dane_ulica[5], dane_ulica[6])
+        xxx_ulica_geo = geo_data[0]
+        yyy_osm = geo_data[1]
     else:
         xxx_ulica_geo = ['']
     # ulica_geo = ['']
@@ -141,15 +143,9 @@ def if_statements(line):
     tt = ''
     for i in [cena_opis, opis_opis, adres_opis, kw_opis]:
         if i:
-            tt+=str(i) + ';'
+            tt += str(i) + ';'
     tt = re.sub(r';$', '', re.sub(r'\n', '', tt))
-    # s_opis = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '',
-     #        re.sub(r'\n', '', '{0};{1};{2};księgi podane w RCiWN: {3};{4}' .format(cennik[2],
-     #        opis(line), dane_adresowe[6], nr_kw[1], uzbrojenie(line))))))
-    # t_opis = tt
-    # opis_all = re.sub(r'^$', '', re.sub(r'^;', '', re.sub(r';{2,}', '', re.sub(r'\n', '', '{0};{1};{2};księga gruntowa: {3}' .format(cena[2], opis_f(line), dane_adresowe[7], kw_all[1])))))
     z_opis = tt
-    # a_id = geo(dane_ulica[0], dane_ulica[1])
     z = np.column_stack((a_id, b_data_transakcji, c_wojewodztwo, d_powiat, e_gmina, f_miejscowosc,
                          g_dzielnica, h_obreb_geodezyjny, i_arkusz, j_ulica, k_nr_domu, l_nr_lokalu,
                          m_powierzchnia_uzytkowa, n_cena_laczna, o_cena_mp2, p_cena_mp, q_cena_mp2mp,
@@ -167,5 +163,5 @@ def if_statements(line):
                          bn_dzial_3_grunt, bo_wartosc_rynkowa, bp_wartosc_odtworzeniowa, bq_stawka_vat,
                          br_mp_stawka_vat, bs_data_utworzenia, bt_data_modyfikacji, bu_wpisana_przez,
                          bv_modyfikowana_przez, bw_sw_ch_energ, bx_nr_sw_ch_energ, by_wsk_zapot, bz_wsk_zapot_EK,
-                         ca_nr_dzialki, cb_pole_powierzchni_gruntu,  cc_udzial, xxx_ulica_geo))
+                         ca_nr_dzialki, cb_pole_powierzchni_gruntu,  cc_udzial, xxx_ulica_geo, yyy_osm))
     return z
