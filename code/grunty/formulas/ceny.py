@@ -3,9 +3,10 @@ from grunty.variables import n_cena_laczna, x_cena_brutto
 
 N = re.compile('.*Cena\\s?łączna\\snieruchomości\\s?:\\s?\\b([^zł]+)(?=\\s?z?ł?\\s?okre).*')
 Y = re.compile('Typ\\s?właś.*\\s?:\\s?(osoba fizyczna|\\s?osoba\\s?fizyczna|\\s?osoba\\s?prawna|gmina|\\s?gmina\\s?|\
-               \\s?Skarb\\s?Państwa\\s?)', re.IGNORECASE)
+               \\s?Skarb\\s?Państwa|Skarb Państwa)', re.IGNORECASE)
 Z_uwagi_do_ceny = re.compile('.*Uwagi\\s?do\\s?ceny\\s?:\\s?(.*?)(?=\\s?Nr\\s?dok).*', re.S)
-G = re.compile('.*Cena\\s?:\\s?\\b([^zł]+)(?=\\s?z?ł?\\s?cena\\s?1).*', re.IGNORECASE)
+# G = re.compile('.*Cena\\s?:\\s?\\b([^zł]+)(?=\\s?z?ł?\\s?cena\\s?1).*', re.IGNORECASE)
+G = re.compile('(?<=Cena:)\\s?(.*)\\s?z\\s?[lł]\\s?')
 
 
 def ceny(line):
@@ -13,8 +14,10 @@ def ceny(line):
     netto = re.compile('(netto|nett?o|net)', re.IGNORECASE)
     res = Y.search(line)
 
+    print(Y.search(line))
     if Y.search(line):
         res_y1 = res.group(1)
+        print(res_y1)
     else:
         res_y1 = ''
 
@@ -28,7 +31,7 @@ def ceny(line):
         res6 = N.search(line)
         res6prim = res6.group(1)
         res6prim1 = re.sub(r'\s+', '', res6prim)
-        if res_y1 in ['osoba fizyczna', 'gmina']:
+        if res_y1 in ['osoba fizyczna', 'gmina', 'Skarb Państwa']:
             n_cena_laczna.append(res6prim1)
             x_cena_brutto.append(res6prim1)
         elif res_y1 in ['osoba prawna']:
@@ -55,7 +58,7 @@ def ceny(line):
             res6 = G.search(line)
             res6prim = res6.group(1)
             res6prim1 = re.sub(r'\s+', '', res6prim)
-            if res_y1 in ['osoba fizyczna', 'gmina']:
+            if res_y1 in ['osoba fizyczna', 'gmina', 'Skarb Państwa']:
                 n_cena_laczna.append(res6prim1)
                 x_cena_brutto.append(res6prim1)
             elif res_y1 in ['osoba prawna']:
