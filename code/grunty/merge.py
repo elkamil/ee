@@ -90,7 +90,8 @@ def if_statements(line):
     bd_udzial = udzial(line)
     be_funkcja = funkcja(line)
     if is_online():
-        xxx_ulica_geo = geo(dane_ulica[3], dane_ulica[4])
+        geo_data = geo(dane_ulica[3], dane_ulica[4])
+        xxx_ulica_geo = geo_data[0]
     else:
         xxx_ulica_geo = ['']
 

@@ -1,7 +1,7 @@
 import re
 from grunty.variables import ae_sprzedajacy, ac_zrodlo_informacji
 Y = re.compile('Typ\\s?właś.*\\s?:\\s?(osoba fizyczna|\\s?osoba\\s?fizyczna|\\s?osoba\\s?prawna|gmina|\\s?gmina\\s?|\
-               \\s?Skarb\\s?Państwa\\s?)', re.IGNORECASE)
+               \\s?Skarb\\s?Państwa|Skarb Państwa)', re.IGNORECASE)
 
 
 def rodzaj_osoby(line):
