@@ -14,10 +14,8 @@ def ceny(line):
     netto = re.compile('(netto|nett?o|net)', re.IGNORECASE)
     res = Y.search(line)
 
-    print(Y.search(line))
     if Y.search(line):
         res_y1 = res.group(1)
-        print(res_y1)
     else:
         res_y1 = ''
 
