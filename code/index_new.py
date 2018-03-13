@@ -12,7 +12,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 from variables import folder, static_dir
 from shutdown import shutdown as shutdown_f
-
+import re
 
 def redirect_url():
     return request.args.get('next') or \
@@ -37,7 +37,7 @@ def allowed_file(filename):
 
 def make_tree(path):
     # lst = os.listdir(path)
-    lst = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
+    lst = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f)) and re.match(r'.*.xlsx', f)]
     return lst
 
 
