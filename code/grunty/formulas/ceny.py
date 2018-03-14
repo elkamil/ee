@@ -32,9 +32,9 @@ def ceny(line):
         if res_y1 in ['osoba fizyczna', 'Skarb Państwa']:
             n_cena_laczna.append(res6prim1)
             x_cena_brutto.append(res6prim1)
-        if res_y1 in ['gmina']:
+        elif res_y1 in ['gmina']:
             n_cena_laczna.append('')
-            x_cena_brutto.append(res6prim1)    
+            x_cena_brutto.append(res6prim1)
         elif res_y1 in ['osoba prawna']:
             if brutto.search(uwagi_do_ceny) is None:
                 if netto.search(uwagi_do_ceny) is not None:
@@ -59,8 +59,11 @@ def ceny(line):
             res6 = G.search(line)
             res6prim = res6.group(1)
             res6prim1 = re.sub(r'\s+', '', res6prim)
-            if res_y1 in ['osoba fizyczna', 'gmina', 'Skarb Państwa']:
+            if res_y1 in ['osoba fizyczna', 'Skarb Państwa']:
                 n_cena_laczna.append(res6prim1)
+                x_cena_brutto.append(res6prim1)
+            elif res_y1 in ['gmina']:
+                n_cena_laczna.append('')
                 x_cena_brutto.append(res6prim1)
             elif res_y1 in ['osoba prawna']:
                 if brutto.search(uwagi_do_ceny) is None:

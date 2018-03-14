@@ -9,3 +9,48 @@
 [2018-03-13 13:54:22,088] {/home/ee/code/index_new.py:60} INFO - Koniec procesu konwertowania dla pliku: ZKK17.TE.6621.6709.2016_LOKALE_PRZETARG.pdf
 [2018-03-13 13:54:24,316] {/home/ee/code/index_new.py:151} INFO - Start procesu usuwania plików
 [2018-03-13 13:54:24,318] {/home/ee/code/index_new.py:158} INFO - Koniec procesu usuwania plików
+[2018-03-14 20:02:01,826] {/home/ee/code/index_new.py:58} INFO - Start procesu konwertowania dla pliku: LM_wolny_rynek_wtorny.pdf
+[2018-03-14 20:02:48,341] {/home/ee/code/index_new.py:58} INFO - Start procesu konwertowania dla pliku: ZKK17.TE.6621.6709.2016_LOKALE_PRZETARG.pdf
+[2018-03-14 20:04:04,352] {/home/ee/code/index_new.py:60} INFO - Koniec procesu konwertowania dla pliku: ZKK17.TE.6621.6709.2016_LOKALE_PRZETARG.pdf
+[2018-03-14 20:06:14,459] {/home/ee/code/index_new.py:151} INFO - Start procesu usuwania plików
+[2018-03-14 20:06:14,462] {/home/ee/code/index_new.py:158} INFO - Koniec procesu usuwania plików
+[2018-03-14 20:06:42,260] {/home/ee/code/index_new.py:90} INFO - Start procesu konwertowania dla pliku: GRUNT_przetarg_gmina.pdf
+[2018-03-14 20:07:30,960] {/home/ee/code/index_new.py:92} INFO - Koniec procesu konwertowania dla pliku: GRUNT_przetarg_gmina.pdf
+[2018-03-14 20:08:49,868] {/home/ee/code/index_new.py:90} INFO - Start procesu konwertowania dla pliku: zkk17.te.6621.1504.2018_2_przetargowy_R.pdf
+[2018-03-14 20:12:26,292] {/home/ee/code/index_new.py:90} INFO - Start procesu konwertowania dla pliku: zkk17.te.6621.1504.2018_2_przetargowy_R.pdf
+[2018-03-14 20:13:31,067] {/home/ee/code/index_new.py:90} INFO - Start procesu konwertowania dla pliku: zkk17.te.6621.1504.2018_2_przetargowy_R.pdf
+[2018-03-14 20:25:06,495] {/home/ee/code/index_new.py:90} INFO - Start procesu konwertowania dla pliku: zkk17.te.6621.1504.2018_2_przetargowy_R.pdf
+[2018-03-14 20:26:00,457] {/home/ee/code/index_new.py:92} INFO - Koniec procesu konwertowania dla pliku: zkk17.te.6621.1504.2018_2_przetargowy_R.pdf
+[2018-03-14 20:26:26,227] {/home/ee/code/index_new.py:90} INFO - Start procesu konwertowania dla pliku: zkk17.te.6621.1504.2018_4_wolny_rynek_Bp.pdf
+[2018-03-14 20:28:21,973] {/home/ee/code/index_new.py:92} INFO - Koniec procesu konwertowania dla pliku: zkk17.te.6621.1504.2018_4_wolny_rynek_Bp.pdf
+[2018-03-14 20:33:48,069] {/home/ee/code/index_new.py:106} INFO - Start procesu konwertowania dla pliku: BUDYNEK_przetarg_os._prawna.pdf
+[2018-03-14 20:34:08,513] {/home/ee/code/index_new.py:108} INFO - Koniec procesu konwertowania dla pliku: BUDYNEK_przetarg_os._prawna.pdf
+[2018-03-14 20:37:51,415] {/home/ee/code/index_new.py:58} INFO - Start procesu konwertowania dla pliku: ZKK17.TE.6621.6709.2016_LOKALE_PRZETARG.pdf
+[2018-03-14 20:39:07,210] {/home/ee/code/index_new.py:60} INFO - Koniec procesu konwertowania dla pliku: ZKK17.TE.6621.6709.2016_LOKALE_PRZETARG.pdf
+[2018-03-14 20:39:35,887] {/home/ee/code/index_new.py:74} INFO - Start procesu konwertowania dla pliku: LU_usugowe_wolny_rynek.pdf
+[2018-03-14 20:40:27,249] {/home/ee/code/index_new.py:76} INFO - Koniec procesu konwertowania dla pliku: LU_usugowe_wolny_rynek.pdf
+[2018-03-14 20:42:10,018] {/home/ee/code/index_new.py:106} INFO - Start procesu konwertowania dla pliku: BUDYNEK_przetarg_os._fizyczna.pdf
+[2018-03-14 20:42:20,498] {/home/ee/code/index_new.py:108} INFO - Koniec procesu konwertowania dla pliku: BUDYNEK_przetarg_os._fizyczna.pdf
+[2018-03-14 20:44:18,798] {/home/ee/code/index_new.py:106} INFO - Start procesu konwertowania dla pliku: BUDYNEK_przetarg_os._fizyczna.pdf
+[2018-03-14 20:44:30,112] {/home/ee/code/index_new.py:108} INFO - Koniec procesu konwertowania dla pliku: BUDYNEK_przetarg_os._fizyczna.pdf
+[2018-03-14 20:48:02,168] {/home/ee/code/index_new.py:106} INFO - Start procesu konwertowania dla pliku: BUDYNEK_przetarg_os._fizyczna.pdf
+[2018-03-14 20:48:12,650] {/home/ee/code/index_new.py:108} INFO - Koniec procesu konwertowania dla pliku: BUDYNEK_przetarg_os._fizyczna.pdf
+[2018-03-14 20:50:21,031] {/home/ee/code/index_new.py:106} INFO - Start procesu konwertowania dla pliku: BUDYNEK_przetarg_os._fizyczna.pdf
+[2018-03-14 20:50:32,958] {/home/ee/code/index_new.py:108} INFO - Koniec procesu konwertowania dla pliku: BUDYNEK_przetarg_os._fizyczna.pdf
+[2018-03-14 20:51:46,034] {/home/ee/code/index_new.py:106} INFO - Start procesu konwertowania dla pliku: BUDYNEK_przetarg_os._prawna.pdf
+[2018-03-14 20:52:07,870] {/home/ee/code/index_new.py:108} INFO - Koniec procesu konwertowania dla pliku: BUDYNEK_przetarg_os._prawna.pdf
+[2018-03-14 20:53:44,660] {/home/ee/code/index_new.py:106} INFO - Start procesu konwertowania dla pliku: BUDYNEK_przetarg_os._fizyczna.pdf
+[2018-03-14 20:53:57,146] {/home/ee/code/index_new.py:108} INFO - Koniec procesu konwertowania dla pliku: BUDYNEK_przetarg_os._fizyczna.pdf
+[2018-03-14 20:54:34,846] {/home/ee/code/index_new.py:122} INFO - Start procesu konwertowania dla pliku: MP_wolny_rynek.pdf
+[2018-03-14 21:04:52,672] {/home/ee/code/index_new.py:122} INFO - Start procesu konwertowania dla pliku: MP_wolny_rynek.pdf
+[2018-03-14 21:13:07,828] {/home/ee/code/index_new.py:124} INFO - Koniec procesu konwertowania dla pliku: MP_wolny_rynek.pdf
+[2018-03-14 21:14:34,249] {/home/ee/code/index_new.py:58} INFO - Start procesu konwertowania dla pliku: LM_przetarg_os._prawna.pdf
+[2018-03-14 21:15:48,613] {/home/ee/code/index_new.py:60} INFO - Koniec procesu konwertowania dla pliku: LM_przetarg_os._prawna.pdf
+[2018-03-14 21:16:15,523] {/home/ee/code/index_new.py:74} INFO - Start procesu konwertowania dla pliku: LU_inna_wolny_rynek.pdf
+[2018-03-14 21:16:41,623] {/home/ee/code/index_new.py:76} INFO - Koniec procesu konwertowania dla pliku: LU_inna_wolny_rynek.pdf
+[2018-03-14 21:17:59,078] {/home/ee/code/index_new.py:151} INFO - Start procesu usuwania plików
+[2018-03-14 21:17:59,079] {/home/ee/code/index_new.py:158} INFO - Koniec procesu usuwania plików
+[2018-03-14 21:18:16,125] {/home/ee/code/index_new.py:106} INFO - Start procesu konwertowania dla pliku: 3_budynki_os._prawne_ZKK.17.TE.6621.4757.2017_1.pdf
+[2018-03-14 21:20:13,347] {/home/ee/code/index_new.py:108} INFO - Koniec procesu konwertowania dla pliku: 3_budynki_os._prawne_ZKK.17.TE.6621.4757.2017_1.pdf
+[2018-03-14 21:34:05,569] {/home/ee/code/index_new.py:90} INFO - Start procesu konwertowania dla pliku: GRUNT_przetarg_gmina_cz._2.pdf
+[2018-03-14 21:34:39,260] {/home/ee/code/index_new.py:92} INFO - Koniec procesu konwertowania dla pliku: GRUNT_przetarg_gmina_cz._2.pdf

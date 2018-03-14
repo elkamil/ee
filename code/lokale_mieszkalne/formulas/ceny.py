@@ -45,7 +45,7 @@ def ceny(line):
             ab_cena_brutto.append(res6prim1)
         elif res_y1 in ['gmina']:
             n_cena_laczna.append('')
-            ab_cena_brutto.append(res6prim1)    
+            ab_cena_brutto.append(res6prim1)
         elif res_y1 in ['osoba prawna']:
             if brutto.search(uwagi_do_ceny) is None:
                 if netto.search(uwagi_do_ceny) is not None:
