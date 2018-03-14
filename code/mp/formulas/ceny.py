@@ -3,7 +3,7 @@ from mp.variables import p_cena, u_cena_brutto
 
 N = re.compile('.*Cena\\s?łączna\\snieruchomości\\s?:\\s?\\b([^zł]+)(?=\\s?z?ł?\\s?okre).*')
 Y = re.compile('Typ\\s?właś.*\\s?:\\s?(osoba fizyczna|\\s?osoba\\s?fizyczna|\\s?osoba\\s?prawna|gmina|\\s?gmina\\s?|\
-               \\s?Skarb\\s?Państwa\\s?)', re.IGNORECASE)
+               \\s?Skarb\\s?Państwa|Skarb Państwa)', re.IGNORECASE)
 Z_uwagi_do_ceny = re.compile('.*Uwagi\\s?do\\s?ceny\\s?:\\s?(.*?)(?=\\s?Nr\\s?dok).*', re.S)
 
 
@@ -27,23 +27,26 @@ def ceny(line):
         res6 = N.search(line)
         res6prim = res6.group(1)
         res6prim1 = re.sub(r'\s+', '', res6prim)
-        if res_y1 in ['osoba fizyczna','gmina']:
-            p_cena.append(res6prim1)
+        if res_y1 in ['osoba fizyczna', 'Skarb Państwa']:
+            p_cena.append('res6prim1')
             u_cena_brutto.append(res6prim1)
+        if res_y1 in ['gmina']:
+            p_cena.append('')
+            u_cena_brutto.append(res6prim1)    
         elif res_y1 in ['osoba prawna']:
             if brutto.search(uwagi_do_ceny) is None:
                 if netto.search(uwagi_do_ceny) is not None:
                     p_cena.append(round(float(res6prim1), 2))
-                    brutto = float(res6prim1)*1.08
+                    brutto = float(res6prim1)*1.23
                     u_cena_brutto.append(round(brutto, 2))
                 else:
                     u_cena_brutto.append(round(float(res6prim1), 2))
-                    netto = float(res6prim1)/1.08
+                    netto = float(res6prim1)/1.23
                     p_cena.append(round(netto, 2))
-                    uwagi_do_ceny = "Brak informacji czy cena netto/brutto, ceny unettowiono " + uwagi_do_ceny
+                    uwagi_do_ceny = "Brak informacji czy cena netto/brutto, ceny unettowiono o 23% " + uwagi_do_ceny
             else:
                 u_cena_brutto.append(round(float(res6prim1), 2))
-                netto = float(res6prim1)/1.08
+                netto = float(res6prim1)/1.23
                 p_cena.append(round(netto, 2))
         else:
             u_cena_brutto.append('')

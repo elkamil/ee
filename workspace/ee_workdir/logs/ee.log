@@ -1,3 +1,11 @@
 [2018-01-17 12:03:10,539] {/home/ee/code/index_new.py:57} INFO - Start procesu konwertowania dla pliku: ZKK17.TE.6621.6709.2016_LOKALE_W.RYNEK.pdf
 [2018-01-17 18:25:21,086] {/home/ee/code/index_new.py:151} INFO - Start procesu usuwania plików
 [2018-01-17 18:25:21,096] {/home/ee/code/index_new.py:158} INFO - Koniec procesu usuwania plików
+[2018-03-13 13:49:54,861] {/home/ee/code/index_new.py:58} INFO - Start procesu konwertowania dla pliku: ZKK17.TE.6621.6709.2016_LOKALE_PRZETARG.pdf
+[2018-03-13 13:50:53,934] {/home/ee/code/index_new.py:60} INFO - Koniec procesu konwertowania dla pliku: ZKK17.TE.6621.6709.2016_LOKALE_PRZETARG.pdf
+[2018-03-13 13:52:03,092] {/home/ee/code/index_new.py:151} INFO - Start procesu usuwania plików
+[2018-03-13 13:52:03,093] {/home/ee/code/index_new.py:158} INFO - Koniec procesu usuwania plików
+[2018-03-13 13:52:07,843] {/home/ee/code/index_new.py:58} INFO - Start procesu konwertowania dla pliku: ZKK17.TE.6621.6709.2016_LOKALE_PRZETARG.pdf
+[2018-03-13 13:54:22,088] {/home/ee/code/index_new.py:60} INFO - Koniec procesu konwertowania dla pliku: ZKK17.TE.6621.6709.2016_LOKALE_PRZETARG.pdf
+[2018-03-13 13:54:24,316] {/home/ee/code/index_new.py:151} INFO - Start procesu usuwania plików
+[2018-03-13 13:54:24,318] {/home/ee/code/index_new.py:158} INFO - Koniec procesu usuwania plików
