@@ -2,7 +2,8 @@ import re
 from lokale_mieszkalne.variables import y_typ_wlasciciela, aj_sprzedajacy, n_cena_laczna, ab_cena_brutto,\
                              m_powierzchnia_uzytkowa, ac_cena_brutto_mp2, o_cena_mp2
 
-Y = re.compile('Typ\\s?właś.*\\s?:\\s?(osoba fizyczna|\\s?osoba\\s?fizyczna|\\s?osoba\\s?prawna|gmina|\\s?gmina\\s?|\\s?Skarb\\s?Państwa\\s?)', re.IGNORECASE)
+Y = re.compile('Typ\\s?właś.*\\s?:\\s?(osoba fizyczna|\\s?osoba\\s?fizyczna|\\s?osoba\\s?prawna|gmina|\\s?gmina\\s?|\
+               \\s?Skarb\\s?Państwa|Skarb Państwa)', re.IGNORECASE)
 N = re.compile('.*Cena\\s?łączna\\snieruchomości\\s?:\\s?\\b([^zł]+)(?=\\s?z?ł?\\s?okre).*')
 Z_uwagi_do_ceny = re.compile('.*Uwagi\\s?do\\s?ceny\\s?:\\s?(.*?)(?=\\s?Nr\\s?dok).*', re.S)
 M = re.compile('.*Pow\\.\\s?użytk\\.\\s?:\\s?\\b(.*)(?=\\s?m\\s?kw\\.).*')
@@ -39,9 +40,12 @@ def ceny(line):
         res6 = N.search(line)
         res6prim = res6.group(1)
         res6prim1 = re.sub(r'\s+', '', res6prim)
-        if res_y1 in ['osoba fizyczna', 'gmina']:
+        if res_y1 in ['osoba fizyczna', 'Skarb Państwa']:
             n_cena_laczna.append(res6prim1)
             ab_cena_brutto.append(res6prim1)
+        elif res_y1 in ['gmina']:
+            n_cena_laczna.append('')
+            ab_cena_brutto.append(res6prim1)    
         elif res_y1 in ['osoba prawna']:
             if brutto.search(uwagi_do_ceny) is None:
                 if netto.search(uwagi_do_ceny) is not None:

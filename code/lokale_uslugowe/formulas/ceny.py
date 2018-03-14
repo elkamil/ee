@@ -2,7 +2,8 @@ import re
 from lokale_uslugowe.variables import  af_sprzedajacy, n_cena_laczna, bw_cena_brutto,\
                              m_powierzchnia_uzytkowa, o_cena_mp2, y_typ_wlasciciela
 
-Y = re.compile('Typ\\s?właś.*\\s?:\\s?(osoba fizyczna|\\s?osoba\\s?fizyczna|\\s?osoba\\s?prawna|gmina|\\s?gmina\\s?|\\s?Skarb\\s?Państwa\\s?)', re.IGNORECASE)
+Y = re.compile('Typ\\s?właś.*\\s?:\\s?(osoba fizyczna|\\s?osoba\\s?fizyczna|\\s?osoba\\s?prawna|gmina|\\s?gmina\\s?|\
+               \\s?Skarb\\s?Państwa|Skarb Państwa)', re.IGNORECASE)
 N = re.compile('.*Cena\\s?łączna\\snieruchomości\\s?:\\s?\\b([^zł]+)(?=\\s?z?ł?\\s?okre).*')
 Z_uwagi_do_ceny = re.compile('.*Uwagi\\s?do\\s?ceny\\s?:\\s?(.*?)(?=\\s?Nr\\s?dok).*', re.S)
 M = re.compile('.*Pow\\.\\s?użytk\\.\\s?:\\s?\\b(.*)(?=\\s?m\\s?kw\\.).*')
@@ -41,23 +42,26 @@ def ceny(line):
         res6 = N.search(line)
         res6prim = res6.group(1)
         res6prim1 = re.sub(r'\s+', '', res6prim)
-        if res_y1 in ['osoba fizyczna']:
+        if res_y1 in ['osoba fizyczna', 'Skarb Państwa']:
             n_cena_laczna.append(res6prim1)
             bw_cena_brutto.append(res6prim1)
+        if res_y1 in ['gmina']:
+            n_cena_laczna.append('')
+            bw_cena_brutto.append(res6prim1)    
         elif res_y1 in ['osoba prawna']:
             if brutto.search(uwagi_do_ceny) is None:
                 if netto.search(uwagi_do_ceny) is not None:
                     n_cena_laczna.append(round(float(res6prim1), 2))
-                    brutto = float(res6prim1)*1.08
+                    brutto = float(res6prim1)*1.23
                     bw_cena_brutto.append(round(brutto, 2))
                 else:
                     bw_cena_brutto.append(round(float(res6prim1), 2))
-                    netto = float(res6prim1) / 1.08
-                    n_cena_laczna.append(round(netto, 2))
+                    # netto = float(res6prim1) / 1.23
+                    n_cena_laczna.append('')
                     uwagi_do_ceny = "Brak informacji czy cena netto/brutto, ceny unettowiono "+uwagi_do_ceny
             else:
                 bw_cena_brutto.append(round(float(res6prim1), 2))
-                netto = float(res6prim1)/1.08
+                netto = float(res6prim1)/1.23
                 n_cena_laczna.append(round(netto, 2))
         else:
             n_cena_laczna.append('')
@@ -67,23 +71,26 @@ def ceny(line):
             res6 = G.search(line)
             res6prim = res6.group(1)
             res6prim1 = re.sub(r'\s+', '', res6prim)
-            if res_y1 in ['osoba fizyczna', 'gmina']:
+            if res_y1 in ['osoba fizyczna', 'Skarb Państwa']:
                 n_cena_laczna.append(res6prim1)
                 bw_cena_brutto.append(res6prim1)
+                if res_y1 in ['gmina']:
+                    n_cena_laczna.append('')
+                    w_cena_brutto.append(res6prim1)  
             elif res_y1 in ['osoba prawna']:
                 if brutto.search(uwagi_do_ceny) is None:
                     if netto.search(uwagi_do_ceny) is not None:
-                        n_cena_laczna.append(round(float(res6prim1), 2))
-                        brutto = float(res6prim1)*1.08
+                        n_cena_laczna.append('round(float(res6prim1), 2)')
+                        brutto = float(res6prim1)*1.23
                         bw_cena_brutto.append(round(brutto, 2))
                     else:
                         bw_cena_brutto.append(round(float(res6prim1), 2))
-                        netto = float(res6prim1)/1.08
-                        n_cena_laczna.append(round(netto, 2))
+                        # netto = float(res6prim1)/1.23
+                        n_cena_laczna.append('')
                         uwagi_do_ceny = "Brak informacji czy cena netto/brutto, ceny unettowiono " + uwagi_do_ceny
                 else:
                     bw_cena_brutto.append(round(float(res6prim1), 2))
-                    netto = float(res6prim1)/1.08
+                    netto = float(res6prim1)/1.23
                     n_cena_laczna.append(round(netto, 2))
             else:
                 bw_cena_brutto.append('')

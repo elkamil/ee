@@ -15,7 +15,6 @@ from shutdown import shutdown as shutdown_f
 from newPostalCodes import newPostalCode
 import re
 
-
 def redirect_url():
     return request.args.get('next') or \
            request.referrer or \
@@ -39,7 +38,7 @@ def allowed_file(filename):
 
 def make_tree(path):
     # lst = os.listdir(path)
-    lst = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f)) and re.match(r'.*.xlsx',f)]
+    lst = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f)) and re.match(r'.*.xlsx', f)]
     return lst
 
 

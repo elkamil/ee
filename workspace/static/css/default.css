@@ -25,15 +25,17 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
 
+
 body {
 	position: relative;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: #89867e;
 	/*background: #BC5888;*/
-	background: url('/static/logo_ee.png') ;
-        background-size: contain;
+	background-image: url('/static/logo_ee.png') ;
+	background-size: 40%; 
 	background-repeat:   no-repeat;
-	background-position: center right; 
+	background-position: center; 
+
 }
 
 a {
