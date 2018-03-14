@@ -14,9 +14,9 @@
 	border: none;
 	font-family: inherit;
 	font-size: inherit;
-	color: #BC5888
+	color: #BC5888;
 	/*color: inherit;*/
-	/*background: none;*/
+	background: inherit;
 	cursor: pointer;
 	padding: 25px 80px;
 	display: inline-block;
@@ -35,7 +35,7 @@
 	font-family: inherit;
 	font-size: inherit;
 	color: inherit;
-	background: none;
+	background: inherit;
 	cursor: pointer;
 	padding: 15px 50px;
 	display: inline-block;

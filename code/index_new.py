@@ -12,6 +12,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 from variables import folder, static_dir
 from shutdown import shutdown as shutdown_f
+from newPostalCodes import newPostalCode
 import re
 
 def redirect_url():
@@ -23,7 +24,7 @@ def redirect_url():
 UPLOAD_FOLDER = folder+'pdf/'
 RESULT_FOLDER = static_dir
 STATIC_FOLDER = static_dir
-ALLOWED_EXTENSIONS = set(['pdf'])
+ALLOWED_EXTENSIONS = set(['pdf', 'csv'])
 
 
 app = Flask(__name__, template_folder="/home/ee/code/templates", static_folder=static_dir)
@@ -182,6 +183,20 @@ def history():
                               tree_h_grunty=make_tree(path_history_grunty),
                               tree_h_mp=make_tree(path_history_mp))
 
+
+@app.route('/kody_pocztowe', methods=['GET', 'POST'])
+def kody_pocztowe():
+    if request.method == 'POST':
+        file = request.files['file']
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            app.logger.info("Start procesu konwertowania dla pliku: "+filename)
+            newPostalCode(filename)
+            # app.logger.info(print(newPostalCode(filename)))
+            app.logger.info("Koniec procesu konwertowania dla pliku: "+filename)
+            return redirect(url_for('kody_pocztowe'))
+    return fl.render_template('kody_pocztowe.html')
 
 @app.route('/shutdown', methods=['GET', 'POST'])
 def shutdown():

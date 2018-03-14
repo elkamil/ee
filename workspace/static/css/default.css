@@ -2,12 +2,19 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 @font-face {
-	font-family: 'codropsicons';
+	/*font-family: icomoon';*/
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	/*font-family: 'codropsicons';*/
 	src:url('../fonts/codropsicons/codropsicons.eot');
 	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
 		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
 		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+        src:url('../fonts/icomoon/icomoon.eot');
+        src:url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
+                url('../fonts/icomoon/icomoon.woff') format('woff'),
+                url('../fonts/icomoon/icomoon.ttf') format('truetype'),
+                url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -15,7 +22,6 @@
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 
-/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
 
@@ -43,8 +49,11 @@ a:active {
 }
 
 .header {
+  position: relative;
   background-color: #BC5888;
   height: 100px;
+  width: 40%;
+  border-radius: 0 40px 40px 0;
 }
 
 .header img {
@@ -55,9 +64,8 @@ a:active {
 }
 
 .header h1 {
-  position: relative;
-  top: 15px;
-  left: 10px;
+  position: absolute;
+  left: 10%;
   color: #BC5888;
 }
 
