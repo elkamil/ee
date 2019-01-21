@@ -118,6 +118,7 @@ def if_statements(line):
         yyy_osm = geo_data[1]
     else:
         xxx_ulica_geo = ['']
+        yyy_osm = ['']
     # ulica_geo = ['']
 
     if cena[2]:

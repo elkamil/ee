@@ -9,3 +9,35 @@
 [2018-03-13 13:54:22,088] {/home/ee/code/index_new.py:60} INFO - Koniec procesu konwertowania dla pliku: ZKK17.TE.6621.6709.2016_LOKALE_PRZETARG.pdf
 [2018-03-13 13:54:24,316] {/home/ee/code/index_new.py:151} INFO - Start procesu usuwania plików
 [2018-03-13 13:54:24,318] {/home/ee/code/index_new.py:158} INFO - Koniec procesu usuwania plików
+[2018-12-19 13:37:48,211] {/home/ee/code/index_new.py:59} INFO - Start procesu konwertowania dla pliku: LM_przetarg_os._fizyczna.pdf
+[2018-12-19 13:37:48,628] {/home/ee/code/index_new.py:61} INFO - Koniec procesu konwertowania dla pliku: LM_przetarg_os._fizyczna.pdf
+[2018-12-19 13:43:16,423] {/home/ee/code/index_new.py:152} INFO - Start procesu usuwania plików
+[2018-12-19 13:43:16,424] {/home/ee/code/index_new.py:159} INFO - Koniec procesu usuwania plików
+[2018-12-19 13:43:20,314] {/home/ee/code/index_new.py:59} INFO - Start procesu konwertowania dla pliku: LM_przetarg_os._fizyczna.pdf
+[2018-12-19 13:43:20,639] {/home/ee/code/index_new.py:61} INFO - Koniec procesu konwertowania dla pliku: LM_przetarg_os._fizyczna.pdf
+[2018-12-19 13:45:15,927] {/home/ee/code/index_new.py:59} INFO - Start procesu konwertowania dla pliku: LM_przetarg_os._fizyczna.pdf
+[2018-12-19 13:45:22,477] {/home/ee/code/index_new.py:61} INFO - Koniec procesu konwertowania dla pliku: LM_przetarg_os._fizyczna.pdf
+[2018-12-19 13:50:55,248] {/home/ee/code/index_new.py:152} INFO - Start procesu usuwania plików
+[2018-12-19 13:50:55,248] {/home/ee/code/index_new.py:159} INFO - Koniec procesu usuwania plików
+[2018-12-19 13:50:58,867] {/home/ee/code/index_new.py:59} INFO - Start procesu konwertowania dla pliku: LM_przetarg_os._fizyczna.pdf
+[2018-12-19 13:51:05,031] {/home/ee/code/index_new.py:61} INFO - Koniec procesu konwertowania dla pliku: LM_przetarg_os._fizyczna.pdf
+[2019-01-02 12:02:54,951] {/home/ee/code/index_new.py:152} INFO - Start procesu usuwania plików
+[2019-01-02 12:02:54,959] {/home/ee/code/index_new.py:159} INFO - Koniec procesu usuwania plików
+[2019-01-02 12:03:01,125] {/home/ee/code/index_new.py:59} INFO - Start procesu konwertowania dla pliku: LM_przetarg_os._fizyczna.pdf
+[2019-01-02 12:03:07,047] {/home/ee/code/index_new.py:61} INFO - Koniec procesu konwertowania dla pliku: LM_przetarg_os._fizyczna.pdf
+[2019-01-02 12:11:44,379] {/home/ee/code/index_new.py:152} INFO - Start procesu usuwania plików
+[2019-01-02 12:11:44,382] {/home/ee/code/index_new.py:159} INFO - Koniec procesu usuwania plików
+[2019-01-02 12:11:48,067] {/home/ee/code/index_new.py:59} INFO - Start procesu konwertowania dla pliku: LM_przetarg_os._fizyczna.pdf
+[2019-01-02 12:11:53,978] {/home/ee/code/index_new.py:61} INFO - Koniec procesu konwertowania dla pliku: LM_przetarg_os._fizyczna.pdf
+[2019-01-02 12:30:36,865] {/home/ee/code/index_new.py:152} INFO - Start procesu usuwania plików
+[2019-01-02 12:30:36,866] {/home/ee/code/index_new.py:159} INFO - Koniec procesu usuwania plików
+[2019-01-02 12:30:41,299] {/home/ee/code/index_new.py:59} INFO - Start procesu konwertowania dla pliku: LM_przetarg_os._fizyczna.pdf
+[2019-01-02 12:30:46,825] {/home/ee/code/index_new.py:61} INFO - Koniec procesu konwertowania dla pliku: LM_przetarg_os._fizyczna.pdf
+[2019-01-03 10:00:56,037] {/home/ee/code/index_new.py:59} INFO - Start procesu konwertowania dla pliku: 16.ZKK17.TE.6621.1662.2017_lok.m.wt.ryn..pdf
+[2019-01-03 10:02:47,259] {/home/ee/code/index_new.py:59} INFO - Start procesu konwertowania dla pliku: 16.ZKK17.TE.6621.1662.2017_lok.m.wt.ryn..pdf
+[2019-01-03 10:04:18,714] {/home/ee/code/index_new.py:59} INFO - Start procesu konwertowania dla pliku: 16.ZKK17.TE.6621.1662.2017_lok.m.wt.ryn..pdf
+[2019-01-03 10:04:53,486] {/home/ee/code/index_new.py:59} INFO - Start procesu konwertowania dla pliku: 16.ZKK17.TE.6621.1662.2017_lok.m.wt.ryn..pdf
+[2019-01-03 10:06:27,284] {/home/ee/code/index_new.py:59} INFO - Start procesu konwertowania dla pliku: 16.ZKK17.TE.6621.1662.2017_lok.m.wt.ryn..pdf
+[2019-01-03 10:08:15,243] {/home/ee/code/index_new.py:59} INFO - Start procesu konwertowania dla pliku: 16.ZKK17.TE.6621.1662.2017_lok.m.wt.ryn..pdf
+[2019-01-03 10:10:36,380] {/home/ee/code/index_new.py:59} INFO - Start procesu konwertowania dla pliku: LM_wolny_rynek_pierwotny.pdf
+[2019-01-03 10:32:22,105] {/home/ee/code/index_new.py:61} INFO - Koniec procesu konwertowania dla pliku: LM_wolny_rynek_pierwotny.pdf

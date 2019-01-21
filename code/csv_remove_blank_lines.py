@@ -13,6 +13,7 @@ def RemoveBlankLines():
     output_file = folder_tmp+result_no_blank_lines
     with open(blanks, "r") as f, open(output_tmp_file, "w") as outfile_tmp:
         for i in f.readlines():
+            i = re.sub(r'^\s+', '', i)
             if not re.search('^\\d+$', i):
                 outfile_tmp.write(i)
 
