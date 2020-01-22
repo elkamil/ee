@@ -53,5 +53,9 @@ def main(filename, wybor):
     return xlsx_f
 
 
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+    ##main()
+    #main("budynki_zgkikm.te.6621.227.2020.pdf",3)
+#    RemoveBlankLines()
+#    OCR2CSV(3)
+#    xlsx_f = CSV2XLSX("budynki_zgkikm.te.6621.227.2020.pdf",3)

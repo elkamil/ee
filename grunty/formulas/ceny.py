@@ -5,8 +5,9 @@ N = re.compile('.*Cena\\s?łączna\\snieruchomości\\s?:\\s?\\b([^zł]+)(?=\\s?z
 Y = re.compile('Typ\\s?właś.*\\s?:\\s?(osoba fizyczna|\\s?osoba\\s?fizyczna|\\s?osoba\\s?prawna|gmina|\\s?gmina\\s?|\
                \\s?Skarb\\s?Państwa|Skarb Państwa)', re.IGNORECASE)
 Z_uwagi_do_ceny = re.compile('.*Uwagi\\s?do\\s?ceny\\s?:\\s?(.*?)(?=\\s?Nr\\s?dok).*', re.S)
-# G = re.compile('.*Cena\\s?:\\s?\\b([^zł]+)(?=\\s?z?ł?\\s?cena\\s?1).*', re.IGNORECASE)
-G = re.compile('(?<=Cena:)\\s?(.*)\\s?z\\s?[lł]\\s?')
+#G = re.compile('.*Cena\\s?:\\s?\\b([^zł]+)(?=\\s?z?ł?\\s?cena\\s?1).*', re.IGNORECASE)
+G = re.compile('.*Cena\\s?:\\s?\\b([^zł]+)(?=\\s?z?ł?\\s?cena\\s?1).*', re.IGNORECASE)
+#G = re.compile('(?<=Cena:)\\s?(.*)\\s?z\\s?[lł]\\s?')
 
 
 def ceny(line):
@@ -84,11 +85,11 @@ def ceny(line):
             x_cena_brutto.append('')
             n_cena_laczna.append('')
     if n_cena_laczna[0]:
-        n_cena_laczna_2f = ['%.2f' % elem for elem in [float(i) for i in n_cena_laczna]]
+        n_cena_laczna_2f = [ '%.2f' % float(n_cena_laczna[0]) ]
     else:
         n_cena_laczna_2f = ['']
     if x_cena_brutto[0]:
-        x_cena_brutto_2f = ['%.2f' % elem for elem in [float(i) for i in x_cena_brutto]]
+        x_cena_brutto_2f = ['%.2f' % float(x_cena_brutto[0]) ]
     else:
         x_cena_brutto_2f = ['']
     return n_cena_laczna_2f, x_cena_brutto_2f, uwagi_do_ceny

@@ -6,27 +6,6 @@ Y = re.compile('Typ\\s?właś.*\\s?:\\s?(osoba fizyczna|\\s?osoba\\s?fizyczna|\\
                \\s?Skarb\\s?Państwa|Skarb Państwa)', re.IGNORECASE)
 Z_uwagi_do_ceny = re.compile('.*Uwagi\\s?do\\s?ceny\\s?:\\s?(.*?)(?=\\s?Nr\\s?dok).*', re.S)
 
-#line ='''\
-#1. Wrocław, AL. ŚLIWOWA 2 m.G44 (wolny rynek)
-#Sprzedał : (ws - współwłasność) -
-#Kupił: - Udział: 265/53125
-#Typ właściciela : osoba fizyczna
-#GRUNT LOKAL
-#Gmina : 026401_1, M. Wrocław
-##Obręb : 0035 - Maślice, Ark.: 13, Nr dz.: 69/3,69/1,70/1 Liczba izb: 0
-#Funkcja : B / Bp Funkcja : G
-#Pow. : 0.7837 ha Pow. użytk. : 26.50 m kw.
-#Cena: Cena:
-#Cena 1 m kw.: Cena 1 m kw.:
-#Cena łączna nieruchomości: 58 000 zł określono w dniu 01.03.2019
-##Uwagi do ceny:
-#Nr dok.: AN1057/2019-1061/2019, KW: WR1K/00199828/1,WR1K/00211219/0
-#Uzbrojenie: Ks, g(m), e, t(m), Rodzaj bud. :
-#Przeznaczenie terenu :
-##Opis dodatkowy :\
-#'''.format(length='multi-line', ordinal='second')
-
-
 
 def ceny(line):
     brutto = re.compile('(brr?utt?o|vat|brut)', re.IGNORECASE)
@@ -53,7 +32,7 @@ def ceny(line):
             u_cena_brutto.append(res6prim1)
         if res_y1 in ['gmina']:
             p_cena.append('')
-            u_cena_brutto.append(res6prim1)
+            u_cena_brutto.append(res6prim1)    
         elif res_y1 in ['osoba prawna']:
             if brutto.search(uwagi_do_ceny) is None:
                 if netto.search(uwagi_do_ceny) is not None:
@@ -90,13 +69,11 @@ def ceny(line):
     # else:
     # o_cena_mp2.append('')
     if p_cena[0]:
-        p_cena_2f = [ '%.2f' % float(p_cena[0]) ]
-        #p_cena_2f = ['%.2f' % elem for elem in [float(i) for i in p_cena]]
+        p_cena_2f = ['%.2f' % float(p_cena[0])]
     else:
         p_cena_2f = ['']
     if u_cena_brutto[0]:
-        u_cena_brutto_2f = ['%.2f' % float(u_cena_brutto[0]) ]
-        #u_cena_brutto_2f = ['%.2f' % elem for elem in [float(i) for i in u_cena_brutto]]
+        u_cena_brutto_2f = ['%.2f' % float(u_cena_brutto[0])]
     else:
         u_cena_brutto_2f = ['']
     return p_cena_2f, u_cena_brutto_2f, uwagi_do_ceny

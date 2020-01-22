@@ -91,19 +91,19 @@ def ceny(line):
 
 
     if n_cena_laczna[0]:
-        n_cena_laczna_2f = ['%.2f' % elem for elem in [float(i) for i in n_cena_laczna]]
+        n_cena_laczna_2f = ['%.2f' % float(n_cena_laczna[0])]
     else:
         n_cena_laczna_2f = ['']
     if ab_cena_brutto[0]:
-        ab_cena_brutto_2f = ['%.2f' % elem for elem in [float(i) for i in ab_cena_brutto]]
+        ab_cena_brutto_2f = ['%.2f' % float(ab_cena_brutto[0])]
     else:
         ab_cena_brutto_2f = ['']
     if ac_cena_brutto_mp2[0]:
-        ac_cena_brutto_mp2_2f = ['%.2f' % elem for elem in [float(i) for i in ac_cena_brutto_mp2]]
+        ac_cena_brutto_mp2_2f = ['%.2f' % float(ac_cena_brutto_mp2[0])]
     else:
         ac_cena_brutto_mp2_2f = ['']
     if o_cena_mp2[0]:
-        o_cena_mp2_2f = ['%.2f' % elem for elem in [float(i) for i in o_cena_mp2]]
+        o_cena_mp2_2f = ['%.2f' % float(o_cena_mp2[0])]
     else:
         o_cena_mp2_2f = ['']
     return y_typ_wlasciciela, aj_sprzedajacy, uwagi_do_ceny, n_cena_laczna_2f, ab_cena_brutto_2f,\

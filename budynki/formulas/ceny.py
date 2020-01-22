@@ -69,11 +69,11 @@ def ceny(line):
     # else:
         # o_cena_mp2.append('')
     if p_cena[0]:
-        p_cena_2f = ['%.2f' % elem for elem in [float(i) for i in p_cena]]
+        p_cena_2f = ['%.2f' % float(p_cena[0])]
     else:
         p_cena_2f = ['']
     if w_cena_brutto[0]:
-        w_cena_brutto_2f = ['%.2f' % elem for elem in [float(i) for i in w_cena_brutto]]
+        w_cena_brutto_2f = ['%.2f' % float(w_cena_brutto[0])]
     else:
         w_cena_brutto_2f = ['']
     return p_cena_2f, w_cena_brutto_2f, uwagi_do_ceny

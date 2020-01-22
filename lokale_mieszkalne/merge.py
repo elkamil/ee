@@ -115,7 +115,7 @@ def if_statements(line):
     if is_online():
         geo_data = geo(dane_ulica[5], dane_ulica[6])
         xxx_ulica_geo = geo_data[0]
-        yyy_osm = geo_data[1]
+#        yyy_osm = geo_data[1]
     else:
         xxx_ulica_geo = ['']
     # ulica_geo = ['']
@@ -163,5 +163,5 @@ def if_statements(line):
                          bn_dzial_3_grunt, bo_wartosc_rynkowa, bp_wartosc_odtworzeniowa, bq_stawka_vat,
                          br_mp_stawka_vat, bs_data_utworzenia, bt_data_modyfikacji, bu_wpisana_przez,
                          bv_modyfikowana_przez, bw_sw_ch_energ, bx_nr_sw_ch_energ, by_wsk_zapot, bz_wsk_zapot_EK,
-                         ca_nr_dzialki, cb_pole_powierzchni_gruntu,  cc_udzial, xxx_ulica_geo, yyy_osm))
+                         ca_nr_dzialki, cb_pole_powierzchni_gruntu,  cc_udzial, xxx_ulica_geo))
     return z

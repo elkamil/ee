@@ -42,4 +42,4 @@ def geo(ulica, nr_domu):
 
     street_view = 'http://maps.google.com/maps?q=&layer=c&cbll={0},{1}' .format(output["latitude"], output["longitude"])
     # osm = 'https://www.openstreetmap.org/#map=19/{0}/{1}' .format(location.raw['osm_type'],location.raw['osm_id'])
-    return street_view, osm
+    return street_view

@@ -81,7 +81,6 @@ ca_nr_dzialki = ['']
 cb_pole_powierzchni_gruntu = ['']
 cc_udzial = ['']
 xxx_ulica_geo = ['']
-yyy_osm = ['']
 ulica_geo = ['']
 
 
@@ -107,7 +106,7 @@ header_csv = ["Id", "Data transakcji / wyceny", "Województwo", "Powiat", "Gmina
               "Data modyfikacji", "Wpisana przez", "Modyfikowana przez", "Świadectwo charakterystyki energetycznej",
               "Nr św. ch. energetycznej", "Wskaźnik zapotrzebowania na energię pierwotną (EP)",
               "Wskaźnik zapotrzebowania na energię pierwotną (EK)", "Numer działki",
-              "Pole powierzchni gruntu", "Udział", "Street View", "OpenStreetMap"]
+              "Pole powierzchni gruntu", "Udział", "Street View"]
 
 kolumny = [a_id,  b_data_transakcji, c_wojewodztwo, d_powiat, e_gmina, f_miejscowosc, g_dzielnica, h_obreb_geodezyjny,
            i_arkusz, h_obreb_geodezyjny, j_ulica, k_nr_domu, l_nr_lokalu, m_powierzchnia_uzytkowa, n_cena_laczna,
@@ -123,7 +122,7 @@ kolumny = [a_id,  b_data_transakcji, c_wojewodztwo, d_powiat, e_gmina, f_miejsco
            bi_cena_waluta, bj_waluta, bk_kurs_waluty, bl_stan_prawny_budynku, bm_dzial_3, bn_dzial_3_grunt,
            bo_wartosc_rynkowa, bp_wartosc_odtworzeniowa, bq_stawka_vat, br_mp_stawka_vat, bs_data_utworzenia,
            bt_data_modyfikacji, bu_wpisana_przez, bv_modyfikowana_przez, bw_sw_ch_energ, bx_nr_sw_ch_energ,
-           by_wsk_zapot, bz_wsk_zapot_EK, ca_nr_dzialki, cb_pole_powierzchni_gruntu,  cc_udzial, xxx_ulica_geo, yyy_osm]
+           by_wsk_zapot, bz_wsk_zapot_EK, ca_nr_dzialki, cb_pole_powierzchni_gruntu,  cc_udzial, xxx_ulica_geo]
 kolumny1 = ["a_id", "b_data_transakcji", "c_wojewodztwo", "d_powiat", "e_gmina", "f_miejscowosc",
             "g_dzielnica", "h_obreb_geodezyjny", "i_arkusz", "h_obreb_geodezyjny", "j_ulica",
             "k_nr_domu", "l_nr_lokalu", "m_powierzchnia_uzytkowa", "n_cena_laczna", "o_cena_mp2",
